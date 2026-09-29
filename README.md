@@ -65,8 +65,6 @@ Set the coordinate system, domain, discretization and selected variogram paramet
 
 Quality flags identify records for review rather than automatically repairing them. Existing preparation exclusions are recorded separately. Conditional realizations express uncertainty under the adopted data interpretation and spatial model; they do not cover every source of geological or engineering uncertainty.
 
-The implementation reports the original **unnormalized natural-log entropy**, with its legacy handling of zero probabilities. This differs from the normalized entropy formulation discussed in D2.1. Variability is `1 - max(p)`. These indicators describe ensemble uncertainty and are not engineering failure probabilities or risk measures.
-
 ## Munich reference example
 
 The selected example figures use `configs/exponential_20260916.json`. The baseline and smoke profiles have different covariance settings and are not substitutes for this configuration.
