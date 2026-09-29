@@ -1,0 +1,11 @@
+{
+  "k": 5,
+  "realizations_per_fold": 100,
+  "grouping": "Entire borehole IDs; neighbouring holes sharing original or composite XY grid columns grouped together",
+  "seed": 12345,
+  "preprocessing": "Training-only original save_train (Quantile transform); training-only categorical conditioning",
+  "model": "Fixed exponential variograms; conditional CV, not nested variogram selection",
+  "target": "Three-class hierarchical lithology below GOK, plus binary SISIM accuracy on clay/sand observations",
+  "indicator_accuracy": "One-vs-rest (TP + TN) / N; class recall also reported",
+  "weighting": "Per observed composite; borehole-macro accuracy separately recorded"
+}

@@ -1,0 +1,28 @@
+{
+  "crs": "EPSG:25832",
+  "rotation": 0,
+  "sources": [
+    {
+      "name": "690_5334.tif",
+      "sha256": "ae5ac6ee9993353893da249d60e2ef4b746c40dd71e9681dd1f57353164442cb"
+    },
+    {
+      "name": "690_5335.tif",
+      "sha256": "2fcfb5bd4b60bd507550a34dfe5a6b530844d8ed428c633a7545923222da1f8f"
+    },
+    {
+      "name": "691_5334.tif",
+      "sha256": "bc2e7561e4708292ed22233d076385d31ee66218e24bb8e667108deda71ca497"
+    },
+    {
+      "name": "691_5335.tif",
+      "sha256": "13d29eab009ba268f189d91989f50f724a014da3dcbc7a8d167f8f00b3845967"
+    }
+  ],
+  "sample": "Nearest native 1 m raster cell at each 10 m grid centre",
+  "inclusion": "Voxel top elevation <= sampled GOK",
+  "gok_min": 510.6360168457031,
+  "gok_max": 521.1080322265625,
+  "retained_cells": 857561,
+  "excluded_cells": 1142439
+}

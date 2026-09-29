@@ -1,0 +1,10 @@
+{
+  "realizations_shape": true,
+  "valid_classes": true,
+  "probability_sum": true,
+  "probability_range": true,
+  "finite_uq": true,
+  "legacy_entropy_bounds": true,
+  "variability_definition": true,
+  "quantile_order": true
+}

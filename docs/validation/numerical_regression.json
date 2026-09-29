@@ -1,0 +1,87 @@
+{
+  "reference": "Direct original functions reading the same actual GSLIB output files",
+  "checks": {
+    "sgsim_reader": {
+      "passed": true,
+      "shape": [
+        100,
+        576
+      ],
+      "max_absolute_difference": 0.0
+    },
+    "sgsim_backtransform_and_trend": {
+      "passed": true,
+      "shape": [
+        100,
+        576
+      ],
+      "max_absolute_difference": 0.0
+    },
+    "sisim_20_by_5_reader": {
+      "passed": true,
+      "shape": [
+        100,
+        23040
+      ],
+      "max_absolute_difference": 0.0
+    },
+    "hierarchical_combination": {
+      "passed": true,
+      "shape": [
+        100,
+        23040
+      ],
+      "max_absolute_difference": 0.0
+    },
+    "uq_s_type": {
+      "passed": true,
+      "shape": [
+        23040
+      ],
+      "max_absolute_difference": 0.0
+    },
+    "uq_fs_type": {
+      "passed": true,
+      "shape": [
+        23040
+      ],
+      "max_absolute_difference": 0.0
+    },
+    "uq_p_clay": {
+      "passed": true,
+      "shape": [
+        23040
+      ],
+      "max_absolute_difference": 0.0
+    },
+    "uq_p_sand": {
+      "passed": true,
+      "shape": [
+        23040
+      ],
+      "max_absolute_difference": 0.0
+    },
+    "uq_p_gravel": {
+      "passed": true,
+      "shape": [
+        23040
+      ],
+      "max_absolute_difference": 0.0
+    },
+    "uq_entropy": {
+      "passed": true,
+      "shape": [
+        23040
+      ],
+      "max_absolute_difference": 0.0
+    },
+    "uq_var": {
+      "passed": true,
+      "shape": [
+        23040
+      ],
+      "max_absolute_difference": 0.0
+    }
+  },
+  "passed": true
+}

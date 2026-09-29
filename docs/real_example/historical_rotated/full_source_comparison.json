@@ -1,0 +1,66 @@
+{
+  "qbasis": {
+    "passed": true,
+    "shape_full": [
+      2149,
+      4
+    ],
+    "shape_subset": [
+      2149,
+      4
+    ]
+  },
+  "tertiary_points": {
+    "passed": true,
+    "shape_full": [
+      97581,
+      4
+    ],
+    "shape_subset": [
+      97581,
+      4
+    ]
+  },
+  "coords_d": {
+    "passed": true,
+    "shape_full": [
+      1461,
+      3
+    ],
+    "shape_subset": [
+      1461,
+      3
+    ]
+  },
+  "coords_t": {
+    "passed": true,
+    "shape_full": [
+      1461,
+      3
+    ],
+    "shape_subset": [
+      1461,
+      3
+    ]
+  },
+  "grid_data": {
+    "passed": true,
+    "shape_full": [
+      10000
+    ],
+    "shape_subset": [
+      10000
+    ]
+  },
+  "points_rotated": {
+    "passed": true,
+    "shape_full": [
+      87956,
+      4
+    ],
+    "shape_subset": [
+      87956,
+      4
+    ]
+  }
+}

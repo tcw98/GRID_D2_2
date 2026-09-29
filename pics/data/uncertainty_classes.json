@@ -1,0 +1,11 @@
+{
+  "entropy_max_below_ground": 1.0985126170507196,
+  "entropy_above_one_below_ground": 3061,
+  "entropy_classes": "<0.3; 0.3\u20130.7 inclusive; >0.7 (including values >1, unchanged legacy entropy)",
+  "variability_classes": "<0.2; 0.2\u20130.4 inclusive; >0.4",
+  "colors": {
+    "Clay": "#9955bb",
+    "Sand": "#f28e2b",
+    "Quaternary": "#ffdf00"
+  }
+}

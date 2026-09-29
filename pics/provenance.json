@@ -1,0 +1,39 @@
+{
+  "calculation_run": "<LOCAL_WORKSPACE>\\D22_revision_20260916\\run",
+  "config": "data/exponential.json",
+  "ground": "data/terrain.json",
+  "fit_curves": "Directional exponential fits only; vertical indicator experimental values and fitted sill converted back from standardized semivariance",
+  "simulation_models": "Single exponential covariance models consolidated using original summarize_variograms_2D and summarize_variograms (90% horizontal / 10% vertical sill and nugget for indicator)",
+  "production_realizations": 100,
+  "core_hashes": {
+    "UTILITIES_Wang.py": "86910b77976d69950a97e5b87924168027393d63b3665a6e10945409cd9f99e7",
+    "GSLIB_parfl_011.py": "5f8719250d66dac51049ab6cbdbeb47aa9a794ed57eec322183185405f83069d"
+  },
+  "vtk": "../vtk/model_gok_exponential.vtk",
+  "vtk_sha256": "99e4ce79b6c717dbe00bcaf45b2ec8b9ad49009fe2e20ebafd5c75997f5dde8b",
+  "reproduction": "Not run for this revision; no reproduction figures in the active set",
+  "plot_command": "python make_uq_figures.py --work-dir <existing-run-parent> --repo <repository> --out . --part <map|stability|vtk|sections>; sections additionally require --x-cut and --y-cut",
+  "k_folds": 5,
+  "evaluated_composites": 29961,
+  "overall_accuracy": 0.8198324488501719,
+  "shared_train_test_voxels": 0,
+  "cv_plot_command": "python -B make_revision_figures.py --work-dir \"<LOCAL_WORKSPACE>\\D22_revision_20260916\" --out . --part cv --repo \"H:/aaaaWORK/GRID_D22_GitHub_real_data\"",
+  "revision": "2026-09-22",
+  "section_status": "Complete: interpreted intended planes X=691000 and Y=5334800 m; original user literals were outside model domain.",
+  "uncertainty": "Original entropy and variability unchanged; independent three-level classes; no density-combined indicator.",
+  "stability": "Mean Entropy vs. Number of Realizations; cumulative first 20,40,60,80,100 realizations; mean over 857561 below-ground voxels using unchanged evaluate_nmodel. Full-ensemble entropy matches saved output exactly.",
+  "available_production_realizations": 100,
+  "mean_entropy_data": "data/mean_entropy_by_realizations.csv",
+  "section_sampling": "Grid-edge cuts use positive-side cells centered at X=691005 and Y=5334805 m; unrotated EPSG:25832.",
+  "section_figures": [
+    "13_sections_entropy.png",
+    "14_sections_variability.png"
+  ],
+  "section_layout": "Rows: Y-direction, X-direction. Columns: most likely class, uncertainty, independent three-level classification. Above-ground voxels masked.",
+  "geological_colors": {
+    "Quaternary": "yellow #ffdf00",
+    "Sand": "orange #f28e2b",
+    "Clay": "purple #9955bb"
+  },
+  "path_metadata_note": "Original machine-local workspace prefix replaced by <LOCAL_WORKSPACE>; numerical evidence is unchanged."
+}

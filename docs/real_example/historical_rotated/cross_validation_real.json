@@ -1,0 +1,30 @@
+{
+  "continuous_legacy_ensemble_MAE": 0.979803706526347,
+  "continuous_evaluated": 85,
+  "categorical": {
+    "TP": 1273,
+    "FP": 180,
+    "TN": 566,
+    "FN": 122,
+    "precision_clay": 0.8226744186046512,
+    "precision_sand": 0.8761183757742601,
+    "accuracy": 0.8589444184960299
+  },
+  "split_seed": 12345,
+  "preprocessing": "Fold-specific legacy save_train; actual Quantile transform. Variograms fixed from adopted model (not nested refitting).",
+  "scope": "Validation of boundary and indicator submodels; not joint hierarchical cross-validation",
+  "leakage_diagnostics": [
+    {
+      "fold": 0,
+      "shared_voxels": 133,
+      "test_in_grid": 1284,
+      "shared_xy": 0
+    },
+    {
+      "fold": 1,
+      "shared_voxels": 133,
+      "test_in_grid": 857,
+      "shared_xy": 0
+    }
+  ]
+}

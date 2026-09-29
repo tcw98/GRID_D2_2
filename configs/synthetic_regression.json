@@ -1,0 +1,103 @@
+{
+  "profile": "smoke",
+  "preparation": {
+    "grid": {
+      "nx": 24,
+      "ny": 24,
+      "nz": 40,
+      "xsiz": 10,
+      "ysiz": 10,
+      "zsiz": 0.5,
+      "xmn": 688955.0,
+      "ymn": 5335905.0,
+      "zmn": 525.25
+    }
+  },
+  "ensemble": {
+    "parts": 20,
+    "per_part": 5,
+    "seed_base": 69069,
+    "seed_step": 11
+  },
+  "variograms": {
+    "continuous": {
+      "nst": 4,
+      "c0": 0,
+      "nest": [
+        [
+          1,
+          0.35,
+          0,
+          0,
+          0,
+          10,
+          10,
+          6
+        ],
+        [
+          2,
+          0.3,
+          0,
+          0,
+          0,
+          40,
+          30,
+          6
+        ],
+        [
+          2,
+          0.28,
+          0,
+          0,
+          0,
+          300,
+          110,
+          6
+        ],
+        [
+          5,
+          0.05,
+          0,
+          0,
+          0,
+          1e+21,
+          80,
+          6
+        ]
+      ]
+    },
+    "categorical": {
+      "nst": 1,
+      "c0": 0.068,
+      "nest": [
+        [
+          2,
+          0.125,
+          0,
+          0,
+          0,
+          50,
+          50,
+          6
+        ]
+      ]
+    }
+  },
+  "validation": {
+    "continuous_folds": 2,
+    "categorical_folds": 2,
+    "split_seed": 12345,
+    "reproduction_realizations": [
+      1,
+      100
+    ]
+  },
+  "uq": {
+    "chunk_cells": 20000,
+    "stability_counts": [
+      20,
+      50,
+      100
+    ]
+  }
+}

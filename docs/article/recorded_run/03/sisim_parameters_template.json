@@ -1,0 +1,120 @@
+{
+  "vartype": 0,
+  "ncat": 2,
+  "catx": [
+    0,
+    1,
+    "",
+    "",
+    ""
+  ],
+  "gpdfx": [
+    0.5,
+    0.5,
+    "",
+    "",
+    ""
+  ],
+  "icolx": 1,
+  "icoly": 2,
+  "icolz": 3,
+  "icolvr": 4,
+  "directik": "direct.ik",
+  "icolsx": 1,
+  "icolsy": 2,
+  "icolsz": 3,
+  "icol": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "imbsim": 0,
+  "bz": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "tmin": 0,
+  "tmax": 1e+21,
+  "zmin": 0,
+  "zmax": 1,
+  "ltail": 1,
+  "ltbar": 0,
+  "middle": 1,
+  "midpar": 1,
+  "utail": 1,
+  "utpar": 1,
+  "tabfl": "cluster.dat",
+  "icolvrt": 3,
+  "icolwtt": 0,
+  "idbg": 1,
+  "nsim": 5,
+  "grid_params": {
+    "nx": 100,
+    "ny": 100,
+    "nz": 200,
+    "xsiz": 10,
+    "ysiz": 10,
+    "zsiz": 0.5,
+    "xmn": 690405.0,
+    "ymn": 5334505.0,
+    "zmn": 475.25
+  },
+  "seed": 12345,
+  "ndmax": 12,
+  "ncnode": 12,
+  "maxsec": 0,
+  "sstrat": 1,
+  "multgrid": 0,
+  "nmult": 0,
+  "noct": 5,
+  "radiushmax": 100,
+  "radiushmin": 100,
+  "radiusvert": 10,
+  "sang1": 0,
+  "sang2": 0,
+  "sang3": 0,
+  "covtab1": 50,
+  "covtab2": 50,
+  "covtab3": 50,
+  "mik": 0,
+  "mikcat": 1,
+  "ktype": 1,
+  "variogram": [
+    [
+      1,
+      0.025146355593272343,
+      [
+        [
+          2,
+          0.11767956011391793,
+          0,
+          0,
+          0,
+          64.87957597863466,
+          52.98116936030658,
+          7.1206143826965445
+        ]
+      ]
+    ],
+    [
+      1,
+      0.025146355593272343,
+      [
+        [
+          2,
+          0.11767956011391793,
+          0,
+          0,
+          0,
+          64.87957597863466,
+          52.98116936030658,
+          7.1206143826965445
+        ]
+      ]
+    ]
+  ]
+}

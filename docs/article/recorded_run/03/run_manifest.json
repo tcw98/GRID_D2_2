@@ -1,0 +1,107 @@
+{
+  "status": "complete",
+  "config": {
+    "profile": "real_munich_exponential_20260916",
+    "preparation": {
+      "grid": {
+        "nx": 100,
+        "ny": 100,
+        "nz": 200,
+        "xsiz": 10,
+        "ysiz": 10,
+        "zsiz": 0.5,
+        "xmn": 690405.0,
+        "ymn": 5334505.0,
+        "zmn": 475.25
+      },
+      "angle": 0,
+      "radius_xy": [
+        300,
+        300
+      ],
+      "tolerance": 20,
+      "outlier_tolerance": 5,
+      "trans_method": "Johnson"
+    },
+    "ensemble": {
+      "parts": 20,
+      "per_part": 5,
+      "seed_base": 69069,
+      "seed_step": 11
+    },
+    "variograms": {
+      "continuous": {
+        "nst": 1,
+        "c0": 0.13695550591961783,
+        "nest": [
+          [
+            2,
+            0.7633776245730358,
+            0,
+            0,
+            0,
+            63.942492413832866,
+            29.514768062616128,
+            6
+          ]
+        ]
+      },
+      "categorical": {
+        "nst": 1,
+        "c0": 0.025146355593272343,
+        "nest": [
+          [
+            2,
+            0.11767956011391793,
+            0,
+            0,
+            0,
+            64.87957597863466,
+            52.98116936030658,
+            7.1206143826965445
+          ]
+        ]
+      }
+    },
+    "validation": {
+      "continuous_folds": 5,
+      "categorical_folds": 5,
+      "split_seed": 12345,
+      "reproduction_realizations": [
+        1,
+        50,
+        100
+      ]
+    },
+    "uq": {
+      "chunk_cells": 20000,
+      "stability_counts": [
+        20,
+        50,
+        100
+      ]
+    }
+  },
+  "config_digest": "8f3e9a8c57e8083b8c7a5c01e0914fe8e7d23443409440ac4f8ab073fe6cfd6b",
+  "python": "3.12.3 (tags/v3.12.3:f6650f9, Apr  9 2024, 14:05:25) [MSC v.1938 64 bit (AMD64)]",
+  "core_hashes": {
+    "UTILITIES_Wang.py": "86910b77976d69950a97e5b87924168027393d63b3665a6e10945409cd9f99e7",
+    "GSLIB_parfl_011.py": "5f8719250d66dac51049ab6cbdbeb47aa9a794ed57eec322183185405f83069d"
+  },
+  "realizations": 100,
+  "shape": [
+    100,
+    2000000
+  ],
+  "organization": "20 parts x 5; numeric part order; x fastest, then y, then z",
+  "pairing": "SGSIM i with SISIM i; no Cartesian product",
+  "classes": {
+    "1": "clay group",
+    "2": "sand",
+    "3": "Quaternary/gravel"
+  },
+  "executables": {
+    "sgsim": "65202b1707f02701095c7f1e2e64dcd928d201ddfd474bd61e98ca405e17aa13",
+    "sisim": "ef86fab13432647c646eaf4eb6c7cd396e916948453957b381fef0f5efd2b2b8"
+  }
+}

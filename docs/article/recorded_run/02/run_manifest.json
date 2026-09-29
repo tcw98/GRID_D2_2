@@ -1,0 +1,131 @@
+{
+  "status": "complete",
+  "config": {
+    "profile": "real_munich_1km",
+    "preparation": {
+      "grid": {
+        "nx": 100,
+        "ny": 100,
+        "nz": 200,
+        "xsiz": 10,
+        "ysiz": 10,
+        "zsiz": 0.5,
+        "xmn": 690405.0,
+        "ymn": 5334505.0,
+        "zmn": 475.25
+      },
+      "angle": 0,
+      "radius_xy": [
+        300,
+        300
+      ],
+      "tolerance": 20,
+      "outlier_tolerance": 5,
+      "trans_method": "Johnson"
+    },
+    "ensemble": {
+      "parts": 20,
+      "per_part": 5,
+      "seed_base": 69069,
+      "seed_step": 11
+    },
+    "variograms": {
+      "continuous": {
+        "nst": 4,
+        "c0": 0,
+        "nest": [
+          [
+            1,
+            0.35,
+            0,
+            0,
+            0,
+            10,
+            10,
+            6
+          ],
+          [
+            2,
+            0.3,
+            0,
+            0,
+            0,
+            40,
+            30,
+            6
+          ],
+          [
+            2,
+            0.28,
+            0,
+            0,
+            0,
+            300,
+            110,
+            6
+          ],
+          [
+            5,
+            0.05,
+            0,
+            0,
+            0,
+            1e+21,
+            80,
+            6
+          ]
+        ]
+      },
+      "categorical": {
+        "nst": 1,
+        "c0": 0.068,
+        "nest": [
+          [
+            2,
+            0.125,
+            0,
+            0,
+            0,
+            50,
+            50,
+            6
+          ]
+        ]
+      }
+    },
+    "validation": {
+      "continuous_folds": 5,
+      "categorical_folds": 3,
+      "split_seed": 12345,
+      "reproduction_realizations": [
+        1,
+        50,
+        100
+      ]
+    },
+    "uq": {
+      "chunk_cells": 20000,
+      "stability_counts": [
+        20,
+        50,
+        100
+      ]
+    }
+  },
+  "config_digest": "8f3e9a8c57e8083b8c7a5c01e0914fe8e7d23443409440ac4f8ab073fe6cfd6b",
+  "python": "3.12.3 (tags/v3.12.3:f6650f9, Apr  9 2024, 14:05:25) [MSC v.1938 64 bit (AMD64)]",
+  "core_hashes": {
+    "UTILITIES_Wang.py": "86910b77976d69950a97e5b87924168027393d63b3665a6e10945409cd9f99e7",
+    "GSLIB_parfl_011.py": "5f8719250d66dac51049ab6cbdbeb47aa9a794ed57eec322183185405f83069d"
+  },
+  "sensitivity_executed": false,
+  "fitting_note": "Legacy fit_2_curve model-selection/plot behaviour retained; candidates do not change simulation parameters",
+  "executables": {
+    "gamv": "2f27eb8daa3ce9ba7b39414a4e4e4e5f49df62a5527196dc3e6c59b7d1eec766",
+    "varmap": "6630e8e403f0cbdac44f4c7071e9cb9199e2753d9432c107d4f3a61abfc9720f"
+  },
+  "reused_from": "<LOCAL_WORKSPACE>\\D22_real_example\\unrotated_1km\\02",
+  "original_config_digest": "88a257bf6db34d57c96e6e9adacf2b8154b817c6cce758eaec70075b19059463",
+  "reuse_scope": "Unchanged preparation and experimental variograms; theoretical simulation models replaced explicitly by exponential summaries",
+  "path_metadata_note": "Original machine-local workspace prefix replaced by <LOCAL_WORKSPACE>; numerical evidence is unchanged."
+}

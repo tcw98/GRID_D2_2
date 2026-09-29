@@ -1,0 +1,69 @@
+{
+  "audit_date": "2026-09-29",
+  "source": "H:\\aaaaWORK\\GRID_D22_GitHub_real_data",
+  "production_run": "<LOCAL_WORKSPACE>\\D22_revision_20260916\\run",
+  "simulation_rerun": false,
+  "shape": [
+    100,
+    2000000
+  ],
+  "below_ground_voxels": 857561,
+  "entropy": {
+    "counts": [
+      20,
+      40,
+      60,
+      80,
+      100
+    ],
+    "means": [
+      0.4255373156205955,
+      0.43905809783034644,
+      0.44403246237791716,
+      0.4468315074153634,
+      0.4493021127212474
+    ],
+    "saved_max_abs_difference": 0.0,
+    "above_one": 3061,
+    "maximum": 1.0985126170507196
+  },
+  "valid_classes_below_ground": true,
+  "cv_from_confusion_matrices": [
+    {
+      "fold": 1,
+      "N": 6115,
+      "correct": 5043,
+      "accuracy": 0.824693376941946
+    },
+    {
+      "fold": 2,
+      "N": 5401,
+      "correct": 4420,
+      "accuracy": 0.8183669690798
+    },
+    {
+      "fold": 3,
+      "N": 6999,
+      "correct": 5687,
+      "accuracy": 0.8125446492356051
+    },
+    {
+      "fold": 4,
+      "N": 5412,
+      "correct": 4463,
+      "accuracy": 0.824648928307465
+    },
+    {
+      "fold": 5,
+      "N": 6034,
+      "correct": 4950,
+      "accuracy": 0.8203513423931057
+    }
+  ],
+  "cv_N": 29961,
+  "cv_accuracy": 0.8198324488501719,
+  "core_hashes_match": true,
+  "config_matches_run": true,
+  "vtk_hash_matches": true,
+  "path_metadata_note": "Original machine-local workspace prefix replaced by <LOCAL_WORKSPACE>; numerical evidence is unchanged."
+}

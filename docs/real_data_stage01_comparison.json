@@ -1,0 +1,113 @@
+{
+  "reference": "direct legacy calls on the same raw inputs and settings",
+  "historical_baseline": false,
+  "passed": true,
+  "checks": [
+    {
+      "name": "qbasis_ids",
+      "passed": true,
+      "shape": [
+        2087
+      ],
+      "max_absolute_difference": null
+    },
+    {
+      "name": "qbasis",
+      "passed": true,
+      "shape": [
+        2087,
+        3
+      ],
+      "max_absolute_difference": 0.0
+    },
+    {
+      "name": "points",
+      "passed": true,
+      "shape": [
+        86064,
+        4
+      ],
+      "max_absolute_difference": 0.0
+    },
+    {
+      "name": "tertiary_points",
+      "passed": true,
+      "shape": [
+        94498,
+        4
+      ],
+      "max_absolute_difference": 0.0
+    },
+    {
+      "name": "coords",
+      "passed": true,
+      "shape": [
+        1340,
+        3
+      ],
+      "max_absolute_difference": 0.0
+    },
+    {
+      "name": "coords_d",
+      "passed": true,
+      "shape": [
+        1340,
+        3
+      ],
+      "max_absolute_difference": 0.0
+    },
+    {
+      "name": "grid_data",
+      "passed": true,
+      "shape": [
+        10000
+      ],
+      "max_absolute_difference": 0.0
+    },
+    {
+      "name": "coords_t",
+      "passed": true,
+      "shape": [
+        1340,
+        3
+      ],
+      "max_absolute_difference": 0.0
+    },
+    {
+      "name": "trans_params_0",
+      "passed": true,
+      "shape": [],
+      "max_absolute_difference": null
+    },
+    {
+      "name": "trans_params_1",
+      "passed": true,
+      "shape": [],
+      "max_absolute_difference": 0.0
+    },
+    {
+      "name": "trans_params_2",
+      "passed": true,
+      "shape": [],
+      "max_absolute_difference": 0.0
+    },
+    {
+      "name": "trans_params_3",
+      "passed": true,
+      "shape": [],
+      "max_absolute_difference": 0.0
+    },
+    {
+      "name": "trans_params_4",
+      "passed": true,
+      "shape": [],
+      "max_absolute_difference": 0.0
+    },
+    {
+      "name": "trans_params_5",
+      "passed": true,
+      "shape": [],
+      "max_absolute_difference": 0.0
+    }
+  ]
+}

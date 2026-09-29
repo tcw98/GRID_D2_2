@@ -1,0 +1,19 @@
+{
+  "source": "https://www.openstreetmap.org/copyright",
+  "tiles": [
+    "https://tile.openstreetmap.org/16/34872/22741.png",
+    "https://tile.openstreetmap.org/16/34872/22742.png",
+    "https://tile.openstreetmap.org/16/34872/22743.png",
+    "https://tile.openstreetmap.org/16/34872/22744.png",
+    "https://tile.openstreetmap.org/16/34873/22741.png",
+    "https://tile.openstreetmap.org/16/34873/22742.png",
+    "https://tile.openstreetmap.org/16/34873/22743.png",
+    "https://tile.openstreetmap.org/16/34873/22744.png",
+    "https://tile.openstreetmap.org/16/34874/22741.png",
+    "https://tile.openstreetmap.org/16/34874/22742.png",
+    "https://tile.openstreetmap.org/16/34874/22743.png",
+    "https://tile.openstreetmap.org/16/34874/22744.png"
+  ],
+  "map_crs": "EPSG:25832",
+  "zoom": 16
+}

@@ -1,0 +1,81 @@
+{
+  "status": "complete",
+  "config": {
+    "grid": {
+      "nx": 100,
+      "ny": 100,
+      "nz": 200,
+      "xsiz": 10,
+      "ysiz": 10,
+      "zsiz": 0.5,
+      "xmn": 690405.0,
+      "ymn": 5334505.0,
+      "zmn": 475.25
+    },
+    "origin": [
+      688000,
+      5332000
+    ],
+    "angle": 0,
+    "buffer": 500,
+    "crs": "EPSG:25832",
+    "interval": 0.5,
+    "qbasistol": 3,
+    "radius_xy": [
+      300,
+      300
+    ],
+    "tolerance": 20,
+    "outlier_tolerance": 5,
+    "trans_method": "Johnson",
+    "vtk": true,
+    "collar_range": [
+      400,
+      700
+    ],
+    "collar_residual_limit": 10,
+    "qc_radius": 300,
+    "qc_min_neighbours": 3,
+    "qb_residual_limit": 5,
+    "interval_tolerance": 1e-06,
+    "end_depth_review_limit": 500
+  },
+  "wd": "<LOCAL_WORKSPACE>\\GRID_D22_GitHub\\data\\real_munich",
+  "qc_scope": "global IDs/geometry; collar and interval checks within legacy buffer",
+  "vertical_coordinates": "absolute elevations; example is a 100 m thick slab, not terrain-following depth",
+  "python": "3.12.3 (tags/v3.12.3:f6650f9, Apr  9 2024, 14:05:25) [MSC v.1938 64 bit (AMD64)]",
+  "dependencies": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.2",
+    "scipy": "1.13.1",
+    "scikit-learn": "1.5.2",
+    "geopandas": "0.14.4",
+    "pyvista": "0.43.8",
+    "rasterio": "1.4.3",
+    "pykrige": "1.7.2"
+  },
+  "source_hashes": {
+    "UTILITIES_Wang.py": "86910b77976d69950a97e5b87924168027393d63b3665a6e10945409cd9f99e7",
+    "GSLIB_parfl_011.py": "5f8719250d66dac51049ab6cbdbeb47aa9a794ed57eec322183185405f83069d"
+  },
+  "config_digest": "8f3e9a8c57e8083b8c7a5c01e0914fe8e7d23443409440ac4f8ab073fe6cfd6b",
+  "stage01_sha256": "4ebd92d6620a69b8c14bb233d77a1c28c96b0af5eb19db956c3ff13ef48cb86a",
+  "input_hashes": {
+    "<LOCAL_WORKSPACE>\\GRID_D22_GitHub\\data\\real_munich\\data\\bohrungen_epsg25832_shp\\bohrungen.shp": "b36a76a310f3c58e154dead2e66ee359d41d3eef40d8086f60935ce643bcc9dd",
+    "<LOCAL_WORKSPACE>\\GRID_D22_GitHub\\data\\real_munich\\data\\bohrungen_epsg25832_shp\\bohrungen_stammdaten.csv": "ae4be0b2cccb205e52a25b9fad00f623ac965485f9afbb9c0268e757b3733b15",
+    "<LOCAL_WORKSPACE>\\GRID_D22_GitHub\\data\\real_munich\\data\\bohrungen_epsg25832_shp\\bohrungen_schichten.csv": "056cc24380266cf109320759ebb5c03b001f8c4450e2f09258dbb22b4d6960b0",
+    "<LOCAL_WORKSPACE>\\GRID_D22_GitHub\\data\\real_munich\\data\\bohrungen_epsg25832_shp\\bohrungen.dbf": "66914e4bddd329e55f8419f0e1b6f4c94a14bf6a9e2815831b4226a8eee937ab",
+    "<LOCAL_WORKSPACE>\\GRID_D22_GitHub\\data\\real_munich\\data\\bohrungen_epsg25832_shp\\bohrungen.prj": "2bfc323fa76efbd54e39e220c4d8f16ab79728c0eab137ab43fe7fee726e60dc"
+  },
+  "counts": {
+    "survey": 2179,
+    "qbasis": 2179,
+    "tertiary_points": 97818,
+    "coords_d": 1363
+  },
+  "core_sources_unchanged": true,
+  "reused_from": "<LOCAL_WORKSPACE>\\D22_real_example\\unrotated_1km\\01",
+  "original_config_digest": "88a257bf6db34d57c96e6e9adacf2b8154b817c6cce758eaec70075b19059463",
+  "reuse_scope": "Unchanged preparation and experimental variograms; theoretical simulation models replaced explicitly by exponential summaries",
+  "path_metadata_note": "Original machine-local workspace prefix replaced by <LOCAL_WORKSPACE>; numerical evidence is unchanged."
+}

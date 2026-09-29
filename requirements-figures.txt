@@ -1,0 +1,4 @@
+# Additional dependencies for optional article map/figure generation.
+-r requirements.txt
+Pillow>=10,<12
+requests>=2.31,<3

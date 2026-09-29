@@ -1,0 +1,149 @@
+[
+  {
+    "path": "D22_revision_20260916\\run\\03\\qbasis_realizations.npy",
+    "shape": [
+      100,
+      10000
+    ]
+  },
+  {
+    "path": "D22_revision_20260916\\run\\03\\combined_realizations.npy",
+    "shape": [
+      100,
+      2000000
+    ]
+  },
+  {
+    "path": "D22_revision_20260916\\run\\03\\sisim\\realizations.npy",
+    "shape": [
+      100,
+      2000000
+    ]
+  },
+  {
+    "path": "D22_revision_20260916\\run\\cv\\fold_0\\sisim\\realizations.npy",
+    "shape": [
+      100,
+      2000000
+    ]
+  },
+  {
+    "path": "D22_revision_20260916\\run\\cv\\fold_1\\sisim\\realizations.npy",
+    "shape": [
+      100,
+      2000000
+    ]
+  },
+  {
+    "path": "D22_revision_20260916\\run\\cv\\fold_4\\sisim\\realizations.npy",
+    "shape": [
+      100,
+      2000000
+    ]
+  },
+  {
+    "path": "D22_revision_20260916\\run\\cv\\fold_3\\sisim\\realizations.npy",
+    "shape": [
+      100,
+      2000000
+    ]
+  },
+  {
+    "path": "D22_revision_20260916\\run\\cv\\fold_2\\sisim\\realizations.npy",
+    "shape": [
+      100,
+      2000000
+    ]
+  },
+  {
+    "path": "D22_real_example\\real_smoke\\03\\qbasis_realizations.npy",
+    "shape": [
+      100,
+      576
+    ]
+  },
+  {
+    "path": "D22_real_example\\real_smoke\\03\\combined_realizations.npy",
+    "shape": [
+      100,
+      23040
+    ]
+  },
+  {
+    "path": "D22_real_example\\real_smoke\\03\\sisim\\realizations.npy",
+    "shape": [
+      100,
+      23040
+    ]
+  },
+  {
+    "path": "D22_real_example\\real_smoke\\05\\cross_validation\\sis_fold_0\\realizations.npy",
+    "shape": [
+      100,
+      23040
+    ]
+  },
+  {
+    "path": "D22_real_example\\real_smoke\\05\\cross_validation\\sis_fold_1\\realizations.npy",
+    "shape": [
+      100,
+      23040
+    ]
+  },
+  {
+    "path": "D22_real_example\\verified_smoke\\03\\qbasis_realizations.npy",
+    "shape": [
+      100,
+      576
+    ]
+  },
+  {
+    "path": "D22_real_example\\verified_smoke\\03\\combined_realizations.npy",
+    "shape": [
+      100,
+      23040
+    ]
+  },
+  {
+    "path": "D22_real_example\\verified_smoke\\03\\sisim\\realizations.npy",
+    "shape": [
+      100,
+      23040
+    ]
+  },
+  {
+    "path": "D22_real_example\\verified_smoke\\05\\cross_validation\\sis_fold_0\\realizations.npy",
+    "shape": [
+      100,
+      23040
+    ]
+  },
+  {
+    "path": "D22_real_example\\verified_smoke\\05\\cross_validation\\sis_fold_1\\realizations.npy",
+    "shape": [
+      100,
+      23040
+    ]
+  },
+  {
+    "path": "D22_real_example\\unrotated_1km\\03\\qbasis_realizations.npy",
+    "shape": [
+      100,
+      10000
+    ]
+  },
+  {
+    "path": "D22_real_example\\unrotated_1km\\03\\combined_realizations.npy",
+    "shape": [
+      100,
+      2000000
+    ]
+  },
+  {
+    "path": "D22_real_example\\unrotated_1km\\03\\sisim\\realizations.npy",
+    "shape": [
+      100,
+      2000000
+    ]
+  }
+]

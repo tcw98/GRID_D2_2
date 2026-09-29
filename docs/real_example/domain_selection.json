@@ -1,0 +1,590 @@
+{
+  "selected": {
+    "xmin": 690400.0,
+    "ymin": 5334500.0,
+    "occupied_100m_cells": 54.0,
+    "capped_support": 130.0,
+    "eligible_boreholes": 249.0,
+    "all_excel_boreholes": 725.0
+  },
+  "grid": {
+    "nx": 100,
+    "ny": 100,
+    "nz": 200,
+    "xsiz": 10,
+    "ysiz": 10,
+    "zsiz": 0.5,
+    "xmn": 690405.0,
+    "ymn": 5334505.0,
+    "zmn": 475.25
+  },
+  "rationale": "Rank 1 km candidates on a 100 m lattice by occupied 100 m cells, then capped per-cell support (max 3), then eligible borehole count. Eligibility is for siting only: Excel-linked, collar 400\u2013700 m and end depth >=30 m. No such filter is applied to packaged modelling input.",
+  "excel": {
+    "survey_rows": 5080,
+    "layer_rows": 52158,
+    "matched_rows": 4962,
+    "inferred_crs": "EPSG:31468, checked against same-ID EPSG:25832 shapefile coordinates",
+    "median_coordinate_difference_m": 0.2824093193268369,
+    "p95_coordinate_difference_m": 0.29495654411896877
+  },
+  "real_data": {
+    "domain_boreholes": 774,
+    "buffer_boreholes": 2265,
+    "buffer_layer_records": 24110,
+    "collar_elevation_quantiles": [
+      516.2,
+      518.995,
+      520.3
+    ],
+    "original_index_join_mismatches": [
+      {
+        "source_row": 136839,
+        "geometry_id": "7835BG018091",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 136886,
+        "geometry_id": "7835BG018096",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 140274,
+        "geometry_id": "7835BG018092",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 140277,
+        "geometry_id": "7835BG018095",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 142470,
+        "geometry_id": "7835BG018094",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 142478,
+        "geometry_id": "7835BG018093",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 146038,
+        "geometry_id": "7835BG018090",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 146862,
+        "geometry_id": "7835BG017979",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 184735,
+        "geometry_id": "7835BG018526",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 196762,
+        "geometry_id": "7835BG017874",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 197210,
+        "geometry_id": "7835BG017806",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 198458,
+        "geometry_id": "7835BG017803",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 200150,
+        "geometry_id": "7835BG017872",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 200588,
+        "geometry_id": "7835BG017978",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 204307,
+        "geometry_id": "7835BG017804",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 204309,
+        "geometry_id": "7835BG017807",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 204310,
+        "geometry_id": "7835BG017805",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 204776,
+        "geometry_id": "7835BG017907",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 208087,
+        "geometry_id": "7835BG017987",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 208089,
+        "geometry_id": "7835BG017989",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 208090,
+        "geometry_id": "7835BG017988",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 211051,
+        "geometry_id": "7835BG017908",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 211542,
+        "geometry_id": "7835BG018130",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 212812,
+        "geometry_id": "7835BG018307",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 213476,
+        "geometry_id": "7835BG018128",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 213769,
+        "geometry_id": "7835BG018446",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 213770,
+        "geometry_id": "7835BG018443",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 213771,
+        "geometry_id": "7835BG018451",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 213772,
+        "geometry_id": "7835BG018452",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 213774,
+        "geometry_id": "7835BG018448",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 213775,
+        "geometry_id": "7835BG018453",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 213776,
+        "geometry_id": "7835BG018450",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 213777,
+        "geometry_id": "7835BG018444",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 213778,
+        "geometry_id": "7835BG018457",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 213896,
+        "geometry_id": "7835BG018402",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 213897,
+        "geometry_id": "7835BG018401",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 213906,
+        "geometry_id": "7835BG018454",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 213907,
+        "geometry_id": "7835BG018447",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 213908,
+        "geometry_id": "7835BG018449",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 213909,
+        "geometry_id": "7835BG018456",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 213910,
+        "geometry_id": "7835BG018445",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 214513,
+        "geometry_id": "7835BG018487",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 215242,
+        "geometry_id": "7835BG018221",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 215246,
+        "geometry_id": "7835BG018222",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 215349,
+        "geometry_id": "7835BG018220",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 215900,
+        "geometry_id": "7835BG018333",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 216765,
+        "geometry_id": "7835BG018196",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 218564,
+        "geometry_id": "7835BG018085",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 219924,
+        "geometry_id": "7835BG018562",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 221911,
+        "geometry_id": "7835BG018204",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 224000,
+        "geometry_id": "7835BG018455",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 226719,
+        "geometry_id": "7835BG019010",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 226806,
+        "geometry_id": "7835BG018129",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 228826,
+        "geometry_id": "7835BG018541",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 228827,
+        "geometry_id": "7835BG018540",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 228828,
+        "geometry_id": "7835BG018539",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 228829,
+        "geometry_id": "7835BG018538",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 228830,
+        "geometry_id": "7835BG018537",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 228947,
+        "geometry_id": "7835BG018536",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 228948,
+        "geometry_id": "7835BG018535",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 228949,
+        "geometry_id": "7835BG018534",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 228950,
+        "geometry_id": "7835BG018068",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 229077,
+        "geometry_id": "7835BG018050",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 229809,
+        "geometry_id": "7835BG018274",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 230536,
+        "geometry_id": "7835BG018799",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 233300,
+        "geometry_id": "7835BG018442",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 233522,
+        "geometry_id": "7835BG018275",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 233905,
+        "geometry_id": "7835BG018489",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 239099,
+        "geometry_id": "7835BG018527",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 239100,
+        "geometry_id": "7835BG018525",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 241944,
+        "geometry_id": "7835BG018405",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 241945,
+        "geometry_id": "7835BG018404",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 243569,
+        "geometry_id": "7835BG018573",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 244886,
+        "geometry_id": "7835BG018791",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 244887,
+        "geometry_id": "7835BG018790",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 245158,
+        "geometry_id": "7835BG018914",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 245264,
+        "geometry_id": "7835BG018913",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 250051,
+        "geometry_id": "7835BG018702",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 250052,
+        "geometry_id": "7835BG018700",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 250053,
+        "geometry_id": "7835BG018701",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 250054,
+        "geometry_id": "7835BG018699",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 250055,
+        "geometry_id": "7835BG018698",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 250056,
+        "geometry_id": "7835BG018697",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 250057,
+        "geometry_id": "7835BG018696",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 253944,
+        "geometry_id": "7835BG018842",
+        "collar_id": null,
+        "collar_elevation": null
+      },
+      {
+        "source_row": 254517,
+        "geometry_id": "7835BG019011",
+        "collar_id": null,
+        "collar_elevation": null
+      }
+    ]
+  },
+  "domain_corners_epsg25832": [
+    [
+      690400.0,
+      5334500.0
+    ],
+    [
+      691400.0,
+      5334500.0
+    ],
+    [
+      691400.0,
+      5335500.0
+    ],
+    [
+      690400.0,
+      5335500.0
+    ]
+  ],
+  "sources": {
+    "bohrungen.shp": "f9165f6de69b890e8b1e40f48b5bb68864bc3ca54ee15adf0b6076157529ea1f",
+    "bohrungen_schichten.csv": "35ff2b45f8dbb8658755669284998a74f914b6acbd58ad9880a1d6b90a29ea0c",
+    "bohrungen_stammdaten.csv": "312e5f43009dfb0ae78192ae231c57c81a54d3d32d6d4781cc7cbd7e003cd973",
+    "Schichtdaten_U9.xlsx": "e8a6b76668bf4931503670274228abea620b343b89049bf60c35942583ff797a"
+  },
+  "crs": "EPSG:25832",
+  "rotation_degrees": 0,
+  "legacy_preparation_extent": [
+    689905,
+    691905,
+    5334005,
+    5336005
+  ]
+}

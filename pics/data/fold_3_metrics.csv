@@ -1,0 +1,2 @@
+fold,N,test_boreholes,accuracy,borehole_macro_accuracy,shared_train_test_voxels,clay_indicator_acc,clay_recall,clay_precision,clay_N,sand_indicator_acc,sand_recall,sand_precision,sand_N,gravel_indicator_acc,gravel_recall,gravel_precision,gravel_N,sisim_binary_acc
+3,6999,154,0.8125446492356051,0.825561080661079,0,0.8459779968566938,0.788010425716768,0.7545757071547421,2302,0.8184026289469924,0.7642622950819672,0.8085327783558793,3050,0.9607086726675239,0.936247723132969,0.9007009345794392,1647,0.7993273542600897

@@ -1,0 +1,22 @@
+{
+  "date": "2026-09-29",
+  "language": "English documentation and source comments; original German source-data descriptions retained",
+  "regression_tests": {
+    "passed": 11,
+    "failed": 0
+  },
+  "reference_evidence_checks": "passed",
+  "non_comment_source_equivalence": "passed",
+  "cjk_filename_and_text_scan": "passed",
+  "decoded_json_scan": "passed",
+  "docx_visible_text_scan": "passed",
+  "local_markdown_links": "passed",
+  "active_python_syntax_files": 19,
+  "unchanged_binary_assets": 30,
+  "qa_csv_path_columns_sanitized": [
+    "docs/real_example/data_quality_report_1km.csv"
+  ],
+  "numerical_data_changed": false,
+  "production_simulations_rerun": false,
+  "remote_upload_performed": false
+}

@@ -1,0 +1,23 @@
+{
+  "continuous_gaussian": {
+    "in_grid": 85,
+    "outside_grid": 454,
+    "conflicting_points": 23,
+    "unambiguous_all_reproduced": false,
+    "tolerance": 0.001
+  },
+  "categorical": {
+    "in_grid": 2141,
+    "outside_grid": 31561,
+    "conflicting_points": 36,
+    "unambiguous_all_reproduced": false,
+    "tolerance": 0
+  },
+  "final_hierarchy": {
+    "in_grid": 2641,
+    "outside_grid": 42740,
+    "conflicting_points": 79,
+    "unambiguous_all_reproduced": false,
+    "tolerance": 0
+  }
+}

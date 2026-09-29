@@ -1,0 +1,23 @@
+__pycache__/
+*.py[cod]
+.venv*/
+.pytest_cache/
+runs/
+outputs/
+data/local/
+vendor/
+*.exe
+*.msi
+*.out
+*.dbg
+*.binary
+*.pkl
+*.vtk
+*.vti
+*.vtp
+*.zip
+.DS_Store
+Thumbs.db
+
+# Published article visualization (all other run VTK files remain ignored).
+!/vtk/model_gok_exponential.vtk

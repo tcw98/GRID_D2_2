@@ -1,0 +1,41 @@
+{
+  "date": "2026-09-12",
+  "profile": "smoke",
+  "unit_tests_passed": 10,
+  "full_1km_simulation_executed": false,
+  "stages": {
+    "01": {
+      "status": "complete",
+      "config_digest": "a27706b75585ab07b2402b8fd268ff10fe9dd393a634678cd49850eccc36d62e",
+      "python": "3.12.3 (tags/v3.12.3:f6650f9, Apr  9 2024, 14:05:25) [MSC v.1938 64 bit (AMD64)]"
+    },
+    "02": {
+      "status": "complete",
+      "config_digest": "a27706b75585ab07b2402b8fd268ff10fe9dd393a634678cd49850eccc36d62e",
+      "python": "3.12.3 (tags/v3.12.3:f6650f9, Apr  9 2024, 14:05:25) [MSC v.1938 64 bit (AMD64)]",
+      "executables": {
+        "gamv": "2f27eb8daa3ce9ba7b39414a4e4e4e5f49df62a5527196dc3e6c59b7d1eec766",
+        "varmap": "6630e8e403f0cbdac44f4c7071e9cb9199e2753d9432c107d4f3a61abfc9720f"
+      }
+    },
+    "03": {
+      "status": "complete",
+      "config_digest": "a27706b75585ab07b2402b8fd268ff10fe9dd393a634678cd49850eccc36d62e",
+      "python": "3.12.3 (tags/v3.12.3:f6650f9, Apr  9 2024, 14:05:25) [MSC v.1938 64 bit (AMD64)]",
+      "executables": {
+        "sgsim": "65202b1707f02701095c7f1e2e64dcd928d201ddfd474bd61e98ca405e17aa13",
+        "sisim": "ef86fab13432647c646eaf4eb6c7cd396e916948453957b381fef0f5efd2b2b8"
+      }
+    },
+    "04": {
+      "status": "complete",
+      "config_digest": "a27706b75585ab07b2402b8fd268ff10fe9dd393a634678cd49850eccc36d62e",
+      "python": "3.12.3 (tags/v3.12.3:f6650f9, Apr  9 2024, 14:05:25) [MSC v.1938 64 bit (AMD64)]"
+    },
+    "05": {
+      "status": "complete",
+      "config_digest": "a27706b75585ab07b2402b8fd268ff10fe9dd393a634678cd49850eccc36d62e",
+      "python": "3.12.3 (tags/v3.12.3:f6650f9, Apr  9 2024, 14:05:25) [MSC v.1938 64 bit (AMD64)]"
+    }
+  }
+}
