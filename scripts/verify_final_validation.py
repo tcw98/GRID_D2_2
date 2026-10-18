@@ -134,7 +134,7 @@ def verify(root=None):
     current = read(root / 'pics/current_article.json')
     assert current['candidate'] == 'response_step_50'
     assert current['config'] == 'configs/exponential_sisim_final_20261018.json'
-    assert len(current['figure_sha256']) == 22
+    assert len(current['figure_sha256']) == 24
     for name, expected in current['figure_sha256'].items():
         assert digest(root / 'pics' / name) == digest(root / 'pics/final_20261018' / name) == expected
     for folder in [root / 'pics', root / 'pics/final_20261018']:
@@ -147,6 +147,27 @@ def verify(root=None):
         np.testing.assert_allclose(value, peak_record['raw_full_grid_common_reference_RMSE'][direction], atol=1e-14)
     plot_values = pd.read_csv(data / 'variogram_plot_values.csv')
     np.testing.assert_allclose(plot_values.groupby(['direction', 'series']).normalized_gamma.max(), 1, atol=1e-14)
+    sg = read(data / 'sgsim_reproduction_provenance.json')
+    assert sg['realizations'] == 100 and sg['grid_shape_yx'] == [100, 100]
+    assert sg['model'] == cfg['variograms']['continuous']
+    assert sg['source_hashes']['03/sgsim_gaussian.npy'] == '209c9316e67fd079e2f12d23e793e7941ba061aafab6492607ea6dde676cd5a8'
+    assert sg['rerun_sgsim'] is False and sg['rerun_cv'] is False
+    assert sg['source_files_unchanged'] and sg['direct_pair_max_abs_error'] < 2e-12
+    sill = sg['model']['c0'] + sum(n[1] for n in sg['model']['nest'])
+    np.testing.assert_allclose(sill, sg['common_input_sill'], atol=1e-14)
+    moments = pd.read_csv(data / 'sgsim_realization_moments.csv')
+    assert len(moments) == 100 and moments.variance.gt(0).all()
+    table = pd.read_csv(data / 'sgsim_reproduction_plot_values.csv')
+    np.testing.assert_allclose(table.normalized_gamma, table.raw_gamma/sill, atol=1e-14)
+    for name, expected in sg['plot_input_hashes'].items():
+        assert digest(root / name) == expected
+    for direction in ['EW', 'NS']:
+        curves = np.load(data / f'sgsim_{direction}_curves.npy')
+        assert curves.shape == (100, 50) and np.isfinite(curves).all() and (curves >= 0).all()
+        rows = table[(table.direction == direction) & (table.series == 'mean_reproduced')]
+        np.testing.assert_allclose(rows.raw_gamma, curves[:, :15].mean(axis=0), atol=1e-14)
+        for column, q in [('lower', .05), ('upper', .95)]:
+            np.testing.assert_allclose(rows[column], np.quantile(curves[:, :15], q, axis=0)/sill, atol=1e-14)
     vtk_hash = hashlib.sha256()
     with gzip.open(root / current['vtk'], 'rb') as stream:
         for chunk in iter(lambda: stream.read(8 * 1024 * 1024), b''):

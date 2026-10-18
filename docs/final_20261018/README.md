@@ -19,6 +19,12 @@ The final 07 and single 08 independently divide each direction/series by its own
 - [Updated entropy sections](../../pics/final_20261018/13_sections_entropy.png)
 - [Updated variability sections](../../pics/final_20261018/14_sections_variability.png)
 
+### Continuous SGSIM reproduction
+
+SGSIM spatial reproduction is supplied separately as `06_sgsim_variogram_reproduction.png/pdf`: 100 complete 100 x 100 Gaussian residual fields, before trend restoration and back-transform. This is a two-dimensional interface, so only EW and NS are meaningful. Its actual nugget 0.13695550591961783 is retained. Experimental, input and reproduced curves all divide by the same actual total input sill 0.9003331304926536; the nugget/sill ratio is 0.15211648. Positive-distance theoretical curves retain the nugget jump; gamma(0)=0 is shown separately. The original experimental GAMV has nominal lag 5 m and tolerance 2.5 m; reproduced uses all axial grid pairs at 10 m increments. Points retain actual distances and counts, with no fabricated matching observations. The display is limited to 155 m and y=0-1.2. Reproduced/input NRMSE divided by the common sill is EW 0.00873236 and NS 0.00839186; reproduced/experimental NRMSE on overlapping distances is EW 0.08626311 and NS 0.06261752. These metrics do not imply a universal acceptance threshold. Source hashes, pair-estimator checks and the full 100-member lag curves are bundled. The source simulations and CV were not rerun. This common-sill display differs explicitly from the independent-peak shape presentation used for the zero-nugget SISIM figures 07/08.
+
+- [SGSIM experimental/input/reproduced comparison](../../pics/06_sgsim_variogram_reproduction.png)
+
 ## Probability calibration
 
 [Wiegel et al. (2024)](https://doi.org/10.1002/gete.202400011), Figures 9 and 7a, inform the two displays. This project retains five folds for both submodels.

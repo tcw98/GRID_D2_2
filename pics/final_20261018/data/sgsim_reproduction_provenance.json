@@ -1,0 +1,75 @@
+{
+  "component": "SGSIM",
+  "space": "Gaussian residuals before trend/back-transform",
+  "realizations": 100,
+  "grid_shape_yx": [
+    100,
+    100
+  ],
+  "directions": [
+    "EW",
+    "NS"
+  ],
+  "model": {
+    "nst": 1,
+    "c0": 0.13695550591961783,
+    "nest": [
+      [
+        2,
+        0.7633776245730358,
+        0,
+        0,
+        0,
+        63.942492413832866,
+        29.514768062616128,
+        6
+      ]
+    ]
+  },
+  "source_hashes": {
+    "03/sgsim_gaussian.npy": "209c9316e67fd079e2f12d23e793e7941ba061aafab6492607ea6dde676cd5a8",
+    "03/sgsim_parameters.json": "a77e022288bc3b08bf7755057f073e8d886fccba7a0eefc5c398574dede2a8d1",
+    "01/qbasis_no_check_300.gslib": "422c59e01f036e1b70fa720404b7a01367966095dab01dc20d19b813f1dc56fc",
+    "02/continuous_direction_0.csv": "e892ffaff7663614c74ebadef7c88f4df9e24e16fabecced4891867d1df5480f",
+    "02/continuous_direction_1.csv": "d73d22d93ccc44e3c5336347b851e817ed260a892c8a13f13f4c034510bdfd3c"
+  },
+  "source_files_unchanged": true,
+  "estimator": "GAM-equivalent .5 * mean squared differences over all nonperiodic axial grid pairs, per realization",
+  "grid_lag_m": 10,
+  "nlag": 50,
+  "direct_pair_max_abs_error": 5.551115123125783e-16,
+  "experimental": "Unchanged original GAMV: nominal lag 5 m, tolerance 2.5 m; zero and near-zero bins omitted; use actual distances and pair counts",
+  "rerun_sgsim": false,
+  "rerun_cv": false,
+  "common_input_sill": 0.9003331304926536,
+  "nugget_over_sill": 0.1521164792021783,
+  "display": "All three series share the same actual input total sill; no independent peak normalization",
+  "origin": "gamma(0)=0 shown separately; positive-distance input retains the nugget jump",
+  "plot_input_hashes": {
+    "pics/final_20261018/data/sgsim_EW_curves.npy": "f20bd1d1a3bb9a82fcad773b889052fc25bd96b42a8a0eea9f9e10fc9a2fc91b",
+    "pics/data/continuous_direction_0.csv": "e892ffaff7663614c74ebadef7c88f4df9e24e16fabecced4891867d1df5480f",
+    "pics/final_20261018/data/sgsim_NS_curves.npy": "ff64ef931000649ef4aa5f8b7645cc0834057ed4bad766db8905e74e315272a8",
+    "pics/data/continuous_direction_1.csv": "d73d22d93ccc44e3c5336347b851e817ed260a892c8a13f13f4c034510bdfd3c"
+  },
+  "display_xlim_m": 155,
+  "display_ylim": [
+    0,
+    1.2
+  ],
+  "metrics": {
+    "EW": {
+      "mean_vs_input_NRMSE": 0.008732357341747533,
+      "mean_vs_experimental_NRMSE": 0.08626311111981302,
+      "experimental_count": 31,
+      "reproduced_count": 15,
+      "theoretical_inside_pointwise_90pct_fraction": 1.0
+    },
+    "NS": {
+      "mean_vs_input_NRMSE": 0.008391859714833864,
+      "mean_vs_experimental_NRMSE": 0.06261752201386385,
+      "experimental_count": 31,
+      "reproduced_count": 15,
+      "theoretical_inside_pointwise_90pct_fraction": 1.0
+    }
+  }
+}

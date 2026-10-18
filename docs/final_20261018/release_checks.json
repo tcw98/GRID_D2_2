@@ -7,13 +7,13 @@
   "new_packaged_evidence": "PASS: selected input, five-fold binary predictions/bins/metrics, continuous tables and spatial arrays",
   "new_evidence_unittest": "PASS: one data/provenance consistency regression check",
   "full_original_unittest_suite": "PASS: 12/12 tests, including all 11 existing tests plus the current-evidence test; declared requirements in an isolated Windows Python 3.12 environment",
-  "plot_redraw": "PASS: updated final 07 and single full-SISIM 08; nine other article figure pairs retained unchanged",
-  "pdf_render_review": "PASS: eleven current one-page PDFs rendered; updated 07/08 visually reviewed",
+  "plot_redraw": "PASS: 12 current figure pairs, including SGSIM reproduction and approved final SISIM 07/08",
+  "pdf_render_review": "PASS: twelve current one-page PDFs rendered; SGSIM reproduction and final SISIM 07/08 visually reviewed",
   "existing_simulation_sources": "unchanged bytes",
   "git_operations": "User authorized an ordinary commit and push to main; this record describes pre-push validation, not remote publication success",
   "scope": "Packaged evidence consistency and redraw. Does not re-run simulations or prove spatial acceptance.",
   "original_config_terrain_data_vtk_license_ci": "unchanged bytes; original figure aliases replaced by current article figures and old provenance explicitly labelled historical",
-  "current_article_assets": "PASS: 11 PNG/PDF pairs at root pics paths match canonical outputs; only 08_variogram_reproduction remains",
+  "current_article_assets": "PASS: 12 PNG/PDF pairs match canonical outputs; only one SISIM 08 remains",
   "current_vtk": "PASS: compressed file decompresses to the original selected-model SHA-256; no geometry or field conversion",
   "publication_mode": "Replace current README/article guides and affected figure paths; preserve Git history; no force push",
   "spatial_display": "Direction-wise independent plotted-peak normalization to 1; shape only, not raw-amplitude agreement; full binary SISIM grid",
@@ -21,5 +21,29 @@
     "EW": 0.19886292086423718,
     "NS": 0.13333519528919288,
     "Z": 0.09661573462151749
+  },
+  "sgsim_spatial_reproduction": {
+    "realizations": 100,
+    "space": "Gaussian residuals",
+    "same_as_prior_curves_max_abs_error": 5.551115123125783e-16,
+    "direct_pair_max_abs_error": 5.551115123125783e-16,
+    "metrics": {
+      "EW": {
+        "mean_vs_input_NRMSE": 0.008732357341747533,
+        "mean_vs_experimental_NRMSE": 0.08626311111981302,
+        "experimental_count": 31,
+        "reproduced_count": 15,
+        "theoretical_inside_pointwise_90pct_fraction": 1.0
+      },
+      "NS": {
+        "mean_vs_input_NRMSE": 0.008391859714833864,
+        "mean_vs_experimental_NRMSE": 0.06261752201386385,
+        "experimental_count": 31,
+        "reproduced_count": 15,
+        "theoretical_inside_pointwise_90pct_fraction": 1.0
+      }
+    },
+    "rerun_sgsim": false,
+    "rerun_cv": false
   }
 }

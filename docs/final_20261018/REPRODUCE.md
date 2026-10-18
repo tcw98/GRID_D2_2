@@ -1,8 +1,9 @@
 # Reproduce the calibrated-input supplement
 
-Run these from the repository root after installing the existing requirements. Plot redraw needs only NumPy, pandas and Matplotlib and does not invoke GSLIB:
+Run these from the repository root after installing the existing requirements. Plot redraw needs NumPy, pandas, SciPy and Matplotlib and does not invoke GSLIB:
 
 ```powershell
+python scripts/plot_sgsim_reproduction.py
 python scripts/plot_final_variograms.py
 python scripts/refresh_final_model_figures.py
 python scripts/plot_final_calibration.py
@@ -10,7 +11,7 @@ python scripts/publish_article_figures.py
 python scripts/verify_final_validation.py
 ```
 
-Canonical output stays under `pics/final_20261018/`; `publish_article_figures.py` then replaces the current root article figures. Historical numerical evidence and its checks remain separate. The three plotting scripts use the small bundled figure arrays/tables, not a variogram of an ensemble mean. The final 07 and single 08 divide each direction/series by its own plotted maximum; 08 uses only the full binary SISIM grid. These are shape displays and remove amplitude differences. Raw full-grid common-reference RMSE is retained numerically in `pics/final_20261018/data/variogram_peak_normalization.json`. No alternative 08 plots are generated.
+Canonical output stays under `pics/final_20261018/`; `publish_article_figures.py` then replaces the current root article figures. Historical numerical evidence and its checks remain separate. The plotting scripts use the small bundled figure arrays/tables, not a variogram of an ensemble mean. The final 07 and single 08 divide each direction/series by its own plotted maximum; 08 uses only the full binary SISIM grid. These are shape displays and remove amplitude differences. Raw full-grid common-reference RMSE is retained numerically in `pics/final_20261018/data/variogram_peak_normalization.json`. No alternative 08 plots are generated.
 
 For a new production run, explicitly select the new input and a fresh output directory:
 
@@ -38,3 +39,14 @@ python scripts/plot_final_calibration.py
 ```
 
 The helper is specific to this frozen model/grid/holdout design. It refuses incomplete batches or changes to other native simulation settings. The published protocol normalizes local path labels while retaining input hashes; `source_record_sha256` identifies the original local frozen record, not the normalized public JSON bytes. The table summary records both native and public protocol hashes.
+
+## SGSIM spatial reproduction
+
+The added SGSIM plot reuses the 100 original Gaussian residual fields in EW/NS, keeps the non-zero nugget and scales all series by one input sill. See the [full scope and lag definitions](README.md#continuous-sgsim-reproduction).
+
+Default redraw uses the bundled compact arrays. To recalculate them from the same external production run without new simulation:
+
+```powershell
+python scripts/plot_sgsim_reproduction.py --source-run <original-run>
+python scripts/publish_article_figures.py
+```

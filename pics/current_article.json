@@ -5,8 +5,11 @@
   "canonical_outputs": "pics/final_20261018",
   "data": "pics/final_20261018/data",
   "model_provenance": "pics/final_20261018/data/final_model_provenance.json",
+  "sgsim_reproduction_provenance": "pics/final_20261018/data/sgsim_reproduction_provenance.json",
   "vtk": "vtk/model_gok_sisim_final_20261018.vtk.gz",
   "figure_sha256": {
+    "06_sgsim_variogram_reproduction.png": "e3083e5720601771cb43c669e3f355529e4905b8848b99cc86c52e4ea3d00b9a",
+    "06_sgsim_variogram_reproduction.pdf": "e51d7bc3e2b03601f7bab56284367520acd11f9e424ce96ef49229876cee2523",
     "07_variogram_indicator_fit.png": "b076ddf85ce07ff914b726b0d26328124b4abba69cba52cf85f10158c6ba4590",
     "07_variogram_indicator_fit.pdf": "a7a8c6fffc5a010e580a9a86707f6244cad8ace594507e5ae7c288f0c04fb46d",
     "08_variogram_reproduction.png": "633d8543e11f1237a8bfca1c1dec1c79c09ef228f21c8316ac34d611f1b2f2dc",

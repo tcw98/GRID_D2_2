@@ -1,6 +1,6 @@
 """Publish the checked current article figures at the root pics/ paths.
 
-Run after the three plotting commands. --check verifies without overwriting.
+Run after the plotting commands. --check verifies without overwriting.
 """
 from pathlib import Path
 import argparse
@@ -9,7 +9,7 @@ import json
 import shutil
 
 ROOT = Path(__file__).resolve().parents[1]
-STEMS = ['07_variogram_indicator_fit', '08_variogram_reproduction', '10_sisim_sections', '11_hierarchical_combination', '12_uq_plan', '13_sections_entropy', '14_sections_variability', '16_realization_stability', 'figure9_final_calibration', 'figure9_sgsim_calibration', 'figure9_sisim_calibration']
+STEMS = ['06_sgsim_variogram_reproduction', '07_variogram_indicator_fit', '08_variogram_reproduction', '10_sisim_sections', '11_hierarchical_combination', '12_uq_plan', '13_sections_entropy', '14_sections_variability', '16_realization_stability', 'figure9_final_calibration', 'figure9_sgsim_calibration', 'figure9_sisim_calibration']
 
 
 def publish(check=False):
@@ -29,6 +29,7 @@ def publish(check=False):
                   canonical_outputs='pics/final_20261018',
                   data='pics/final_20261018/data',
                   model_provenance='pics/final_20261018/data/final_model_provenance.json',
+                  sgsim_reproduction_provenance='pics/final_20261018/data/sgsim_reproduction_provenance.json',
                   vtk='vtk/model_gok_sisim_final_20261018.vtk.gz',
                   figure_sha256=records)
     path = ROOT / 'pics/current_article.json'
@@ -43,4 +44,4 @@ if __name__ == '__main__':
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--check', action='store_true')
     publish(p.parse_args().check)
-    print('PASS: 11 current article figure pairs')
+    print('PASS: 12 current article figure pairs')
