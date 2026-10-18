@@ -1,0 +1,9 @@
+{
+  "common_reference_variance": 0.24815277295195295,
+  "experimental_variance": 0.24406134044208638,
+  "input_total_sill": 0.25,
+  "origin": "gamma(0)=0 exact identity, drawn only; excluded from fitting",
+  "experimental_plot": "Positive actual distance, positive nominal lag, positive pair count. Zero and near-zero bins retained in CSV.",
+  "shape": "Each reference sill/variance maps to 1; no division by last lag or curve maximum.",
+  "axes": "Distances in metres; normalized semivariance limits 0..1.2"
+}

@@ -35,5 +35,8 @@
     "Sand": "orange #f28e2b",
     "Clay": "purple #9955bb"
   },
-  "path_metadata_note": "Original machine-local workspace prefix replaced by <LOCAL_WORKSPACE>; numerical evidence is unchanged."
+  "path_metadata_note": "Original machine-local workspace prefix replaced by <LOCAL_WORKSPACE>; numerical evidence is unchanged.",
+  "scope": "Historical September calculation, original pics/data tables and original VTK only; root article PNG/PDF figures now use pics/current_article.json.",
+  "current_article_record": "current_article.json",
+  "current_model_record": "final_20261018/data/final_model_provenance.json"
 }

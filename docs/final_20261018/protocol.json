@@ -1,0 +1,91 @@
+{
+  "candidate": "response_step_50",
+  "folds": 5,
+  "realizations_per_fold": 100,
+  "model": {
+    "nst": 4,
+    "c0": 0,
+    "nest": [
+      [
+        2,
+        0.05,
+        0,
+        0,
+        0,
+        63.70443937027282,
+        84.51286660399128,
+        5.773502691896257
+      ],
+      [
+        2,
+        0.04,
+        0,
+        0,
+        0,
+        127.40887874054565,
+        316.92324976496735,
+        5.773502691896257
+      ],
+      [
+        2,
+        0.04,
+        0,
+        0,
+        0,
+        594.4952318395926,
+        3284.6231062456404,
+        14.540760672682122
+      ],
+      [
+        2,
+        0.12,
+        0,
+        0,
+        0,
+        5944.952318395926,
+        4105.778882807051,
+        14.540760672682122
+      ]
+    ]
+  },
+  "grouping": "Unchanged whole-borehole/group folds; source training-only data and SGSIM reused.",
+  "binary_target": "Raw SISIM sand probability at withheld observed Neogene samples (observed classes 1 or 2), not final hierarchical sand probability.",
+  "bins": "Fixed 50 bins of width .02, intervals (lower,upper], p=0 included in first bin. Empty bins remain NaN. No smoothing.",
+  "sgsim": "Unchanged 20261015 continuous out-of-fold predictions. ECDF of saved mid-PIT, same 100-member ensembles; no new SGSIM.",
+  "plot": "One final SISIM 2% staircase plus bisector; one SGSIM cumulative-rank curve plus bisector. No old-model overlay.",
+  "reference": "Wiegel, Peña-Olarte & Cudmani 2024, doi:10.1002/gete.202400011, Figs. 7a and 9. Our CV remains five-fold for both.",
+  "selection": "Variogram fixed before this CV; not adjusted using its calibration curve. Fixed full-data variogram CV is conditional, not nested model-selection validation.",
+  "input_hashes": {
+    "original_cv/borehole_folds.csv": "d81d59bd2aa013d043ea87ca24d695df920a115baae6e821108d594e1e86adab",
+    "original_cv/inputs.npz": "f2e8d4c6ad944161cd222eeab8cac3642d70e15b353248d1a514f3a974aa4de6",
+    "original_run/03/sisim_parameters_template.json": "c0c292a8f72bee1dd4df50020121aa4780ee1c3c18de9073d05802353bac328b",
+    "selected_variogram.json": "d6e7fd4ae1ee1863d4afe8db3da53102fb94730db9ec5ae1a602ea1516a0ab84",
+    "source_adapter/calibrate_sisim.py": "b6fb43e35c0de03973fcc807148de38dfefa10802f796d84bd231e57fd564681",
+    "external_executable/sisim.exe": "ef86fab13432647c646eaf4eb6c7cd396e916948453957b381fef0f5efd2b2b8",
+    "original_cv/fold_0/tertiary.gslib": "b18bbfbf7f579406d99ce4b5cd1f3d3ac8fde8cdea9b149d9be7510d8deb3280",
+    "original_cv/fold_0/sgsim.out": "a398f36c97e07503f8c26101505cfe9a222ed3ef7b3b1f70415fa34a53387c04",
+    "original_cv/fold_0/transform.pkl": "f948cb650454f12928a2cd9c71e06d1339005866b6c5a69843274ef5d21fca7e",
+    "original_cv/fold_0/predictions.csv": "0054d1eb0694b3f6c3996f37f5a080a7b43bbf3261b17b0db51778f56db440f8",
+    "original_cv/fold_1/tertiary.gslib": "ec5613652031fc92efe0dd59a7ad7cac7546e169871ed47d3ce047467640fd9a",
+    "original_cv/fold_1/sgsim.out": "97b432c63ed36f0970aed1c2ed8507a66858421498318223ceb5d4900c544618",
+    "original_cv/fold_1/transform.pkl": "6d5bbf47f3235b9466d96703fc1d7e5c528e743b1f5b61ac378aa47f57cb2878",
+    "original_cv/fold_1/predictions.csv": "2fa7acdd3a0fec73a1737c4f0d7f3e2f0575b8b87210c32fd55429e272df92a7",
+    "original_cv/fold_2/tertiary.gslib": "a4f0d400782dc82c058c6d38a39b27ffb86921a21fa125cfa2843030c2a60fe2",
+    "original_cv/fold_2/sgsim.out": "a2c24cb95a76feb590a1bbc66276a1624f0efa8781f5ae038b7cdb19a943c5d1",
+    "original_cv/fold_2/transform.pkl": "f4dbf02ccc471adbb05cc2c6e7646d2d88d6b63ce9dbf7922d6328048da0f698",
+    "original_cv/fold_2/predictions.csv": "770cbbf4d0938bd9022f8c2b3183cd3e1c729e91e2fb1d4e2e931c9c0f9f86de",
+    "original_cv/fold_3/tertiary.gslib": "d67bc24df2c8acd89c415cad69408811e18f59530ce497e85ff0d259593d0cde",
+    "original_cv/fold_3/sgsim.out": "e548926d614fc6ea8ba9d48dd6a5f555a4778305adcba4da60af6bda82e04e83",
+    "original_cv/fold_3/transform.pkl": "03ac3b16b517958b0b6ddab82e0f86c23027f40d4cc9a9028f004ed1c4816f18",
+    "original_cv/fold_3/predictions.csv": "b2f0ddd989f5a795326a8600c3848df01d20b064f1c56f091fe105c42cdbc91e",
+    "original_cv/fold_4/tertiary.gslib": "a5a6ac9c41ef808513ac8a2b51624905e36bd0608b7234ec210f4ae0c8ddd346",
+    "original_cv/fold_4/sgsim.out": "289256c6846a5fc8f8b1c07f56be65d211b418cf145606eb4b6bcdef9b43dacc",
+    "original_cv/fold_4/transform.pkl": "30886b77327da26ae35a255a1b68d78f1e8a06dec26568947ef7f61efbef20c8",
+    "original_cv/fold_4/predictions.csv": "da574324cad4111cbf57f225c5b07cfa4f4f8dddb32d58f7c1936dc2f4ef2a5b",
+    "original_sgsim_validation/continuous_heldout_predictions.csv": "90f8182d6dc040cf04cef10cf6fd459c7f05167c2a4288026ef797ae8bffb1c9",
+    "original_sgsim_validation/continuous_quantile_calibration.csv": "84dfedbc6fa38546034fbe2594447e82d8550d09b3b10b214cc202e4e22ded5c",
+    "original_sgsim_validation/continuous_interval_coverage.csv": "31caa3cb008e7a83e3fce33f93c6fd61d8a66c2e68c4393f837ce86541fcf4b3"
+  },
+  "source_record_sha256": "4dfaa41124216c5ff00fb945d6649080cb0cedfbd789a3e6c96e7b4e0ea7dbce",
+  "path_labels": "Normalized publication labels; original local protocol is retained outside the repository."
+}

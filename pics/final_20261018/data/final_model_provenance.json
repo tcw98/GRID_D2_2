@@ -1,0 +1,34 @@
+{
+  "candidate": "response_step_50",
+  "realizations": 100,
+  "source_sisim_sha256": "f0c933f5040f1b3c82641aaf4046e9d09eb6d5663c236e001c06c237c9534446",
+  "source_qbasis_sha256": "a52d305f315e8e2654adb06732435271c501a7e87dfce9854bcbcda390769b60",
+  "combined_sha256": "5ec860dc2500a0259c0f7d327cabccafb9b6d6839b1467b16ea7cb34463f5ebe",
+  "terrain_sha256": "ac29f468813e93af286a9dfc1354e3a6cad8640735776bad0714292197c215ae",
+  "mask_count": 857561,
+  "section_x_requested": 691000,
+  "section_x_center": 691005.0,
+  "section_y_requested": 5334800,
+  "section_y_center": 5334805.0,
+  "plan_elevation": 511.25,
+  "realization_indices": [
+    1,
+    50,
+    100
+  ],
+  "entropy": "Unchanged evaluate_nmodel, natural logs, zeros replaced by .0001, no normalization",
+  "classes": {
+    "1": "Clay",
+    "2": "Sand",
+    "3": "Quaternary"
+  },
+  "cv": "Subsequently completed response_step_50 five-fold SISIM CV, 100 per fold; unchanged original SGSIM CV. See final_cv_summary.json.",
+  "minimum_entropy_below_ground": 0.0018420680743952364,
+  "maximum_entropy_below_ground": 1.0985126170507196,
+  "vtk_sha256": "ad50cce1a16531a2183901a6b72c460defe4eea1ab6188905e8ff5697c7a18bd",
+  "vtk_cells": 857561,
+  "numerical_run_core_sha256": "86910b77976d69950a97e5b87924168027393d63b3665a6e10945409cd9f99e7",
+  "repository_release_core_sha256": "3ad13619d9af82137e002f59cc2cdbad6de96834ec25a709fa8ef0eb07e9de4e",
+  "numerical_run_and_repository_non_comment_tokens_equal": true,
+  "source_localization_record": "docs/core_source_localization.json"
+}

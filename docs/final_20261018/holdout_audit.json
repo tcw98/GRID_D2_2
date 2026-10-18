@@ -1,0 +1,52 @@
+{
+  "whole_borehole_ids_exclusive": true,
+  "fold_groups_exclusive": true,
+  "rows": [
+    {
+      "fold": 1,
+      "training_binary_observations": 52123,
+      "test_observations": 6115,
+      "test_boreholes": 142,
+      "same_train_test_voxels": 0,
+      "native_training_data_match_saved_holdout_partition": true,
+      "test_boreholes_in_correct_fold": true
+    },
+    {
+      "fold": 2,
+      "training_binary_observations": 51438,
+      "test_observations": 5401,
+      "test_boreholes": 139,
+      "same_train_test_voxels": 0,
+      "native_training_data_match_saved_holdout_partition": true,
+      "test_boreholes_in_correct_fold": true
+    },
+    {
+      "fold": 3,
+      "training_binary_observations": 49087,
+      "test_observations": 6999,
+      "test_boreholes": 154,
+      "same_train_test_voxels": 0,
+      "native_training_data_match_saved_holdout_partition": true,
+      "test_boreholes_in_correct_fold": true
+    },
+    {
+      "fold": 4,
+      "training_binary_observations": 50537,
+      "test_observations": 5412,
+      "test_boreholes": 125,
+      "same_train_test_voxels": 0,
+      "native_training_data_match_saved_holdout_partition": true,
+      "test_boreholes_in_correct_fold": true
+    },
+    {
+      "fold": 5,
+      "training_binary_observations": 51123,
+      "test_observations": 6034,
+      "test_boreholes": 138,
+      "same_train_test_voxels": 0,
+      "native_training_data_match_saved_holdout_partition": true,
+      "test_boreholes_in_correct_fold": true
+    }
+  ],
+  "scope": "Audits reused native training conditions and original held-out coordinates; variogram selection remains fixed-full-data, not nested."
+}

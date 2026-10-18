@@ -1,0 +1,19 @@
+{
+  "base_repository": "https://github.com/tcw98/GRID_D2_2",
+  "base_commit": "d5d2df25032e991b6f1c4ac566734c0a087f2eaf",
+  "base_rechecked_20261018": "d5d2df25032e991b6f1c4ac566734c0a087f2eaf",
+  "baseline_git_blobs_verified": 148,
+  "original_article_evidence": "PASS: grid/mask, five confusion matrices, grouping, stability, core hashes and original VTK",
+  "new_packaged_evidence": "PASS: selected input, five-fold binary predictions/bins/metrics, continuous tables and spatial arrays",
+  "new_evidence_unittest": "PASS: one data/provenance consistency regression check",
+  "full_original_unittest_suite": "PASS: 12/12 tests, including all 11 existing tests plus the current-evidence test; declared requirements in an isolated Windows Python 3.12 environment",
+  "plot_redraw": "PASS: all three scripts; fourteen PNG/PDF pairs",
+  "pdf_render_review": "PASS: fourteen one-page PDFs rendered and visually reviewed",
+  "existing_simulation_sources": "unchanged bytes",
+  "git_operations": "User authorized an ordinary commit and push to main; this record describes pre-push validation, not remote publication success",
+  "scope": "Packaged evidence consistency and redraw. Does not re-run simulations or prove spatial acceptance.",
+  "original_config_terrain_data_vtk_license_ci": "unchanged bytes; original figure aliases replaced by current article figures and old provenance explicitly labelled historical",
+  "current_article_assets": "PASS: 14 PNG/PDF pairs at root pics paths match canonical current outputs",
+  "current_vtk": "PASS: compressed file decompresses to the original selected-model SHA-256; no geometry or field conversion",
+  "publication_mode": "Replace current README/article guides and affected figure paths; preserve Git history; no force push"
+}
