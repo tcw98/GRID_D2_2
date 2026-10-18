@@ -12,10 +12,10 @@ The selected input received 100 spatial realizations. It subsequently received a
 
 The Figure 8 style panels compare fixed experimental points, the selected theoretical input, one reproduced mean and one 5th-95th percentile envelope per direction. Horizontal nominal lag is 10 m, vertical 0.5 m. Experimental zero/near-zero records remain in the CSVs but are not displayed as regular lags. The reproduced mean/envelope includes the identity gamma(0)=0; this is not an added measured or fitted datum. Axes retain metres horizontally and normalized semivariance 0-1.2 vertically.
 
-Shape panels use each reliable variance/theoretical sill as a unit reference. Formal panels divide every curve by the same reference variance 0.24815277295195295. No endpoint/maximum rescaling is used. Common-reference normalized RMSE is EW 0.13585777, NS 0.06213126 and Z 0.07241337; frozen J=0.10966702. Compared with the preceding candidate the objective improved modestly, but directional residuals remain. These results do not establish satisfactory reproduction of every spatial feature or a universal acceptance threshold.
+The final 07 and single 08 independently divide each direction/series by its own maximum over the plotted lag window, making all displayed peaks one. 08 uses the entire binary SISIM grid, without a Neogene-domain mask. The reproduced mean has linewidth 3.2 and all ensemble members share its denominator, preserving relative spread. Theoretical input is unit-sill scaled and then divided by its plotted peak; this is a display transform, not a modified three-dimensional covariance model. This removes amplitude differences and is a shape comparison only. Scaling factors and raw common-reference full-grid RMSE (EW 0.19886292, NS 0.13333520, Z 0.09661573, reference variance 0.24815277295195295) are in `../../pics/final_20261018/data/variogram_peak_normalization.json`. Raw data and input parameters are unchanged; residuals and conditional-validation limitations remain. This figure does not establish a universal acceptance threshold.
 
-- [Shape comparison, actual Neogene region](../../pics/final_20261018/08_variogram_neogene_shape.png)
-- [Common-reference spatial validation](../../pics/final_20261018/08_variogram_neogene_common_variance.png)
+- [Final 07: experimental and theoretical input](../../pics/07_variogram_indicator_fit.png)
+- [Only final 08: complete SISIM, peak-normalized shapes](../../pics/08_variogram_reproduction.png)
 - [Updated entropy sections](../../pics/final_20261018/13_sections_entropy.png)
 - [Updated variability sections](../../pics/final_20261018/14_sections_variability.png)
 

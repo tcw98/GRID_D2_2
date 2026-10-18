@@ -113,7 +113,7 @@ def verify(root=None):
             curves = np.load(data / f'{scope}_{direction}_curves.npy')
             assert curves.shape == (100, count)
             assert np.isfinite(curves).all() and (curves >= 0).all()
-            if scope == 'neogene':
+            if scope == 'full':
                 h = np.arange(1, count + 1) * step
                 valid = exp.distance.between(h[0], h[-1])
                 target = exp[valid]
@@ -134,16 +134,26 @@ def verify(root=None):
     current = read(root / 'pics/current_article.json')
     assert current['candidate'] == 'response_step_50'
     assert current['config'] == 'configs/exponential_sisim_final_20261018.json'
-    assert len(current['figure_sha256']) == 28
+    assert len(current['figure_sha256']) == 22
     for name, expected in current['figure_sha256'].items():
         assert digest(root / 'pics' / name) == digest(root / 'pics/final_20261018' / name) == expected
+    for folder in [root / 'pics', root / 'pics/final_20261018']:
+        assert {p.name for p in folder.glob('08*.png')} == {'08_variogram_reproduction.png'}
+        assert {p.name for p in folder.glob('08*.pdf')} == {'08_variogram_reproduction.pdf'}
+    peak_record = read(data / 'variogram_peak_normalization.json')
+    for name, expected in peak_record['input_hashes'].items():
+        assert digest(data / name) == expected
+    for direction, value in rmse.items():
+        np.testing.assert_allclose(value, peak_record['raw_full_grid_common_reference_RMSE'][direction], atol=1e-14)
+    plot_values = pd.read_csv(data / 'variogram_plot_values.csv')
+    np.testing.assert_allclose(plot_values.groupby(['direction', 'series']).normalized_gamma.max(), 1, atol=1e-14)
     vtk_hash = hashlib.sha256()
     with gzip.open(root / current['vtk'], 'rb') as stream:
         for chunk in iter(lambda: stream.read(8 * 1024 * 1024), b''):
             vtk_hash.update(chunk)
     assert vtk_hash.hexdigest() == provenance['vtk_sha256']
     return dict(binary_N=len(pred), native_realizations=500, continuous_N=len(continuous),
-                metrics=actual, common_reference_spatial_RMSE=rmse)
+                metrics=actual, full_grid_common_reference_spatial_RMSE=rmse)
 
 
 if __name__ == '__main__':

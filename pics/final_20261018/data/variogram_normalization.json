@@ -4,6 +4,9 @@
   "input_total_sill": 0.25,
   "origin": "gamma(0)=0 exact identity, drawn only; excluded from fitting",
   "experimental_plot": "Positive actual distance, positive nominal lag, positive pair count. Zero and near-zero bins retained in CSV.",
-  "shape": "Each reference sill/variance maps to 1; no division by last lag or curve maximum.",
-  "axes": "Distances in metres; normalized semivariance limits 0..1.2"
+  "shape": "Figures 07 and 08 use direction-wise independent maxima over plotted lags for experimental, input and reproduced mean; this removes amplitude differences.",
+  "axes": "Distances in metres; normalized semivariance limits 0..1.2",
+  "display_scope": "Complete binary SISIM grid, 100 individual realization variograms; not a Neogene-domain mask or final hierarchical class labels.",
+  "normalization_record": "variogram_peak_normalization.json",
+  "amplitude_check": "Common-reference variance is retained for numeric raw full-grid RMSE, not the final displayed ordinates."
 }

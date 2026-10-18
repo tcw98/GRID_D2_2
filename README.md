@@ -76,7 +76,7 @@ The current article uses `configs/exponential_sisim_final_20261018.json`: a zero
 - [Borehole provenance and selection](data/real_munich/README.md)
 - [Current terrain-masked 3D model, gzip compressed](vtk/model_gok_sisim_final_20261018.vtk.gz)
 
-![Spatial continuity: common reference variance](pics/08_variogram_neogene_common_variance.png)
+![Spatial shape: complete binary SISIM, independent direction-wise peak normalization](pics/08_variogram_reproduction.png)
 
 ![Five-fold probability calibration](pics/figure9_final_calibration.png)
 
@@ -96,7 +96,7 @@ python scripts/plot_final_calibration.py
 python scripts/publish_article_figures.py
 ```
 
-The root `pics/` article figures are updated to this result. Their calculation tables and canonical redraw outputs are in `pics/final_20261018/`; `pics/current_article.json` identifies the current assets. The revised input gives modest spatial improvement but retains directional residuals and local binary probability miscalibration; it does not establish universal geological acceptance.
+The root `pics/` article figures are updated to this result. Their calculation tables and canonical redraw outputs are in `pics/final_20261018/`; `pics/current_article.json` identifies the current assets. Figures 07/08 independently scale each direction and series to its own plotted maximum of one; 08 uses the complete binary SISIM grid. This is a shape comparison and removes amplitude differences. The revised input retains spatial residuals and local binary probability miscalibration; it does not establish universal geological acceptance.
 
 The compressed VTK unpacks to `model_gok_sisim_final_20261018.vtk` for visualization. Compression preserves the model bytes and avoids committing an ordinary Git file larger than 100 MiB. The September config, original `pics/data/` tables, original VTK and old provenance record are retained as explicitly historical evidence. They are not the current article result. `python scripts/verify_article_evidence.py` checks that historical snapshot. Earlier presentations also remain in Git history.
 

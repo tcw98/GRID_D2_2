@@ -10,7 +10,7 @@ python scripts/publish_article_figures.py
 python scripts/verify_final_validation.py
 ```
 
-Canonical output stays under `pics/final_20261018/`; `publish_article_figures.py` then replaces the current root article figures. Historical numerical evidence and its checks remain separate. The three plotting scripts use the small bundled figure arrays/tables, not a variogram of an ensemble mean. New unit-sill plots are shape diagnostics; the common-reference panels preserve amplitude mismatch.
+Canonical output stays under `pics/final_20261018/`; `publish_article_figures.py` then replaces the current root article figures. Historical numerical evidence and its checks remain separate. The three plotting scripts use the small bundled figure arrays/tables, not a variogram of an ensemble mean. The final 07 and single 08 divide each direction/series by its own plotted maximum; 08 uses only the full binary SISIM grid. These are shape displays and remove amplitude differences. Raw full-grid common-reference RMSE is retained numerically in `pics/final_20261018/data/variogram_peak_normalization.json`. No alternative 08 plots are generated.
 
 For a new production run, explicitly select the new input and a fresh output directory:
 

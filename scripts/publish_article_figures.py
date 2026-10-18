@@ -9,7 +9,7 @@ import json
 import shutil
 
 ROOT = Path(__file__).resolve().parents[1]
-STEMS = ['07_variogram_indicator_fit', '08_variogram_full_common_variance', '08_variogram_full_shape', '08_variogram_neogene_common_variance', '08_variogram_neogene_shape', '10_sisim_sections', '11_hierarchical_combination', '12_uq_plan', '13_sections_entropy', '14_sections_variability', '16_realization_stability', 'figure9_final_calibration', 'figure9_sgsim_calibration', 'figure9_sisim_calibration']
+STEMS = ['07_variogram_indicator_fit', '08_variogram_reproduction', '10_sisim_sections', '11_hierarchical_combination', '12_uq_plan', '13_sections_entropy', '14_sections_variability', '16_realization_stability', 'figure9_final_calibration', 'figure9_sgsim_calibration', 'figure9_sisim_calibration']
 
 
 def publish(check=False):
@@ -43,4 +43,4 @@ if __name__ == '__main__':
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--check', action='store_true')
     publish(p.parse_args().check)
-    print('PASS: 14 current article figure pairs')
+    print('PASS: 11 current article figure pairs')

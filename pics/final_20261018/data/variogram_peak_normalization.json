@@ -1,0 +1,61 @@
+{
+  "scope": "Complete binary SISIM simulation grid, not hierarchical class labels or ensemble-mean variogram",
+  "normalization": "For each direction, experimental and mean reproduced divide by their own plotted maxima; input divides by total sill and then by its plotted maximum.",
+  "envelope": "100 members share the mean reproduced peak denominator in each direction.",
+  "origin": "Only gamma(0)=0 identity for reproduced; no experimental zero/near-zero bin plotted.",
+  "interpretation": "Peak-normalized shape display. Amplitude is removed; not a common-variance spatial validation.",
+  "input_hashes": {
+    "exponential.json": "d18969ef32f3735a527a7cf35546034ed8c59e25ff0e2ac566504548dff4c58c",
+    "experimental_EW.csv": "f3ee8647157e719570a36aed25d90bf7d028a65a448811cfaf003b8527cdc5c7",
+    "experimental_NS.csv": "198cd95fcb7be60b0be2fe57dceff310760a202e2f53c1f31dcf19371ab825c1",
+    "experimental_Z.csv": "caa1052df3caa376019f66e295c2e23d941b71d5d155b3179ccd24ff472a8109",
+    "full_EW_curves.npy": "b070c82a933a4af66975376a5ceb7518d04da3ec4dc7df7b8ee807f14504b1d1",
+    "full_NS_curves.npy": "914ff1ecbf884bada887c0e72418691607b9a0ae1813744e7257425f2c223321",
+    "full_Z_curves.npy": "052805a3cc0eb4cb3757c33fb985b02981798809c8c2214dc6cfa7f49fc124ec"
+  },
+  "factors": [
+    {
+      "direction": "EW",
+      "experimental_peak": 0.11003,
+      "input_total_sill": 0.25,
+      "input_plotted_peak": 0.09766763315116425,
+      "reproduced_mean_peak": 0.18079784117647413,
+      "experimental_N": 15,
+      "reproduced_N": 15,
+      "experimental_last_distance": 150.011,
+      "reproduced_last_distance": 150.0,
+      "linewidth": 3.2
+    },
+    {
+      "direction": "NS",
+      "experimental_peak": 0.14885,
+      "input_total_sill": 0.25,
+      "input_plotted_peak": 0.11877146744328265,
+      "reproduced_mean_peak": 0.19627559117647064,
+      "experimental_N": 15,
+      "reproduced_N": 15,
+      "experimental_last_distance": 149.548,
+      "reproduced_last_distance": 150.0,
+      "linewidth": 3.2
+    },
+    {
+      "direction": "Z",
+      "experimental_peak": 0.26906,
+      "input_total_sill": 0.25,
+      "input_plotted_peak": 0.24271708767664113,
+      "reproduced_mean_peak": 0.24142214705882356,
+      "experimental_N": 30,
+      "reproduced_N": 30,
+      "experimental_last_distance": 15.0,
+      "reproduced_last_distance": 15.0,
+      "linewidth": 3.2
+    }
+  ],
+  "source_files_unchanged": true,
+  "common_reference_variance": 0.24815277295195295,
+  "raw_full_grid_common_reference_RMSE": {
+    "EW": 0.19886292086423718,
+    "NS": 0.13333519528919288,
+    "Z": 0.09661573462151749
+  }
+}

@@ -4,11 +4,8 @@ The current categorical model is `configs/exponential_sisim_final_20261018.json`
 
 | File under `pics/` (PNG and PDF) | Content |
 | --- | --- |
-| `07_variogram_indicator_fit` | Four-structure, zero-nugget SISIM input against the fixed experimental variograms |
-| `08_variogram_neogene_common_variance` | Formal spatial comparison: common p(1-p) reference, EW/NS/Z |
-| `08_variogram_neogene_shape` | Unit reference sill shape diagnostic, actual Neogene region |
-| `08_variogram_full_common_variance` | Common-reference diagnostic over the entire binary SISIM grid |
-| `08_variogram_full_shape` | Unit-reference shape diagnostic over the entire SISIM grid |
+| `07_variogram_indicator_fit` | Experimental and four-structure zero-nugget input, each direction/series peak-scaled to 1 |
+| `08_variogram_reproduction` | Complete binary SISIM grid, 100 realizations; each direction/series peak-scaled to 1; thick reproduced mean and one envelope |
 | `10_sisim_sections` | New raw SISIM realizations 1, 50 and 100 |
 | `11_hierarchical_combination` | Unchanged SGSIM boundary combined with new SISIM |
 | `12_uq_plan` | New class probabilities, mode, entropy and variability on a plan |
@@ -21,6 +18,6 @@ The current categorical model is `configs/exponential_sisim_final_20261018.json`
 
 The unchanged data/preparation, continuous variography and SGSIM illustrations (`01`-`06`, `09`) remain relevant. The original `18_*` accuracy figures and original `pics/data/` confusion matrices are September historical evidence and are not used as the new binary calibration result.
 
-Each spatial panel contains one experimental point set, one theoretical line, one reproduced mean and one 5th-95th percentile envelope. Experimental zero/near-zero records remain in the source tables but are excluded from regular positive lags. The drawn reproduced origin is the identity gamma(0)=0. Distances are in metres and the normalized y-axis is 0-1.2. Formal common-reference panels retain amplitude mismatch; separate-sill panels diagnose shape only.
+Each spatial panel contains one experimental point set, one theoretical line, one reproduced mean and one 5th-95th percentile envelope. Experimental zero/near-zero records remain in the source tables but are excluded from regular positive lags. The drawn reproduced origin is the identity gamma(0)=0. Distances are in metres and the normalized y-axis is 0-1.2. Only one 08 is delivered. For each direction, experimental points, theoretical input and reproduced mean are divided by their own maxima over the displayed lag window. The 07 theoretical and experimental curves use exactly the same factors as 08. This removes amplitude differences and is a shape display, not a common-variance validation. Raw full-grid RMSE and all scaling factors are retained in `pics/final_20261018/data/variogram_peak_normalization.json`.
 
 `pics/current_article.json` lists the current figure hashes and source directory. `pics/final_20261018/data/` provides the compact arrays and tables used to redraw these figures. The old `pics/provenance.json` is explicitly historical; the current model record is `pics/final_20261018/data/final_model_provenance.json`.
