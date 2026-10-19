@@ -1,8 +1,8 @@
-> Scope: this file records the earlier baseline/preparation profile. The article uses the later exponential configuration and terrain-masked postprocessing. See `docs/article/REPRODUCE.md` and `docs/article/VALIDATION.md` from the repository root. Statements below about no terrain mask or simulations not rerun refer to that earlier profile.
+> Borehole data and selection record. [Current article workflow](../../docs/article/REPRODUCE.md).
 
 # Real Munich borehole example
 
-This is a spatial subset of the user-supplied public Bavarian borehole archive. Its layer descriptions are real observations from `bohrungen_schichten.csv`; no lithology, depth, coordinate or elevation is simulated or repaired.
+This is a spatial subset of the user-supplied public Bavarian borehole archive. The subset retains the original lithology, depth, coordinate and elevation values from `bohrungen_schichten.csv` and the accompanying survey files.
 
 The selected 1 km square contains 774 borehole locations. A 500 m preparation buffer retains 2,265 shapefile/collar rows and 24,110 layer records. Records with missing collar information remain present for the existing QA and legacy exclusion rules. The shapefile and collar table retain the same paired source-row order because the legacy loader joins them by row index. `source_row_mapping.csv` records those original row positions.
 
@@ -12,6 +12,6 @@ Selection ranks 1 km candidate squares on a 100 m lattice by the number of occup
 
 See `docs/real_example/domain_selection.json` for source SHA-256 hashes, original-row issues, coordinate bounds and the complete criteria; the companion CSV and PNG show candidate rankings and the selected footprint. The source archive was supplied at `GRID_D2.2/Example Results/WD/data/bohrungen_epsg25832_shp/`. The accompanying original quick guide is retained here for provenance. No new license is assigned to the source data.
 
-The main grid is unchanged in size: 100 × 100 × 200 cells, spacing 10 × 10 × 0.5 m. In EPSG:25832 its outer boundaries are X 690400–691400 m, Y 5334500–5335500 m, and elevation 475–575 m. First cell centres are (690405, 5334505, 475.25). The example explicitly sets angle = 0; no horizontal rotation is applied. Ground masking is still not applied.
+The main grid is unchanged in size: 100 × 100 × 200 cells, spacing 10 × 10 × 0.5 m. In EPSG:25832 its outer boundaries are X 690400–691400 m, Y 5334500–5335500 m, and elevation 475–575 m. First cell centres are (690405, 5334505, 475.25). The example explicitly sets angle = 0; no horizontal rotation is applied. Article terrain masking is described in the [reproduction guide](../../docs/article/REPRODUCE.md).
 
 The exact legacy preparation bounds are X 689905–691905 m and Y 5334005–5336005 m: the old function measures the buffer from the first cell centre. This 5 m offset is preserved.

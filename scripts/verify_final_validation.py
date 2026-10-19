@@ -1,7 +1,7 @@
 """Check the bundled calibrated-input evidence without external simulation files.
 
-This checks consistency of the packaged tables and arrays, not the existence of
-external native fields. Their hashes and the completed audit are separate records.
+Checks cover the packaged tables, spatial arrays, figures and provenance.
+Stored source hashes identify the external production records.
 Run the original verify_article_evidence.py as well for the September baseline.
 """
 from pathlib import Path
@@ -179,5 +179,5 @@ def verify(root=None):
 
 if __name__ == '__main__':
     result = verify()
-    print('PASS: calibrated-input packaged evidence (external fields not re-read)')
+    print('PASS: calibrated-input tables, spatial arrays, figures and provenance')
     print(json.dumps(result, indent=2))

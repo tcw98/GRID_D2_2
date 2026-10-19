@@ -8,7 +8,7 @@ The smaller 24 × 24 × 40 real-data profile was run through stages 01–05 usin
 
 ## Scientific diagnostics remain unresolved
 
-Hard-data reproduction did not pass completely. The continuous field has 85 in-grid observations and 23 conflicting points; the indicator field has 2,141 in-grid observations and 36 conflicting points; the combined hierarchy has 2,641 in-grid observations and 79 conflicting points. Each check also reports unambiguous observations that were not reproduced. No observations or algorithms were altered to hide these failures.
+Hard-data reproduction did not pass completely. The continuous field has 85 in-grid observations and 23 conflicting points; the indicator field has 2,141 in-grid observations and 36 conflicting points; the combined hierarchy has 2,641 in-grid observations and 79 conflicting points. Each check also reports unambiguous observations that were not reproduced.
 
 The continuous legacy ensemble MAE is 0.9798037065 m over 85 evaluated observations. Binary categorical accuracy is 0.8589444185 over 2,141 observations. Although the two folds share no XY locations, each contains 133 training/test voxel overlaps after grid assignment. These are legacy diagnostic scores, not independent voxel-level validation or joint three-class hierarchical validation. Fold preprocessing retains the original Quantile transform and fixed variograms.
 

@@ -4,7 +4,7 @@ This repository provides a staged workflow for probabilistic subsurface modellin
 
 Continuous geological boundaries are represented with sequential Gaussian simulation (SGSIM), and categorical lithology with sequential indicator simulation (SISIM). A hierarchical combination produces geological realizations from which class probabilities, the most likely class, entropy and variability are calculated.
 
-The workflow is illustrated with a Munich borehole dataset. This reference case demonstrates the methods; its domain, geological interpretation and covariance parameters are not universal defaults for other sites.
+The workflow is illustrated with a Munich borehole dataset. The domain, geological interpretation and covariance parameters are configured for this reference case.
 
 ## Workflow
 
@@ -63,15 +63,15 @@ Use `--wd` to select an input-data directory containing `data/bohrungen_epsg2583
 
 Set the coordinate system, domain, discretization and selected variogram parameters in a configuration file. Review the geological interpretation and category mapping separately: the supplied DIN grouping and Quaternary-base extraction are specific to the Munich example. Some search controls, kriging options and realization settings remain implementation constants in `scripts/workflow_support.py`.
 
-Quality flags identify records for review rather than automatically repairing them. Existing preparation exclusions are recorded separately. Conditional realizations express uncertainty under the adopted data interpretation and spatial model; they do not cover every source of geological or engineering uncertainty.
+Quality flags identify records for review, with preparation exclusions recorded separately. The ensemble quantifies uncertainty conditional on the adopted data interpretation and spatial model.
 
 ## Current Munich article results - 18 October 2026
 
-The current article uses `configs/exponential_sisim_final_20261018.json`: a zero-nugget SISIM input with four nested exponential structures and calibrated directional ranges. The continuous SGSIM input and numerical simulation routines are unchanged. The selected input was actually simulated with 100 spatial realizations and a grouped five-fold SISIM validation with 100 realizations per fold (500 new CV realizations).
+The current article uses `configs/exponential_sisim_final_20261018.json`: a zero-nugget SISIM input with four nested exponential structures and calibrated directional ranges. The selected model has 100 spatial realizations and grouped five-fold SISIM validation with 100 realizations per fold (500 CV realizations).
 
 - [Article reproduction guide](docs/article/REPRODUCE.md)
 - [Current figures](docs/article/FIGURES.md)
-- [Spatial and probability validation, including remaining deviations](docs/article/VALIDATION.md)
+- [Spatial and probability validation](docs/article/VALIDATION.md)
 - [Full parameter and calculation record](docs/final_20261018/README.md)
 - [Borehole provenance and selection](data/real_munich/README.md)
 - [Current terrain-masked 3D model, gzip compressed](vtk/model_gok_sisim_final_20261018.vtk.gz)
@@ -88,7 +88,7 @@ Run the current input explicitly with a fresh output directory and the external 
 python run_workflow.py --config configs/exponential_sisim_final_20261018.json --run-dir runs/article_final --verify-preparation --skip-cv
 ```
 
-Stage 05's legacy submodel CV differs from the article's saved grouped folds; use the [article guide](docs/article/REPRODUCE.md) to replay that validation. The original Johnson-production versus Quantile-CV preprocessing distinction remains. Validate the bundled current evidence and redraw the current figures without simulation:
+The [article guide](docs/article/REPRODUCE.md) describes the grouped cross-validation and preprocessing. Check the bundled results and redraw the figures:
 
 ```powershell
 python scripts/verify_final_validation.py
@@ -99,16 +99,16 @@ python scripts/plot_final_calibration.py
 python scripts/publish_article_figures.py
 ```
 
-The root `pics/` article figures are updated to this result. Their calculation tables and canonical redraw outputs are in `pics/final_20261018/`; `pics/current_article.json` identifies the current assets. Figures 07/08 independently scale each direction and series to its own plotted maximum of one; 08 uses the complete binary SISIM grid. This is a shape comparison and removes amplitude differences. The revised input retains spatial residuals and local binary probability miscalibration; it does not establish universal geological acceptance.
+Article figures are in `pics/`, with redraw inputs in `pics/final_20261018/` and a file index in `pics/current_article.json`. Figures 07-08 compare direction-wise peak-normalized variogram shapes; Figure 08 includes the complete binary SISIM grid. Raw amplitude errors and probability-calibration metrics are reported in the [validation summary](docs/article/VALIDATION.md).
 
-The SGSIM reproduction panel uses the original 100 Gaussian residual fields in EW/NS and a common total input sill, preserving its non-zero nugget. It is supplied alongside the full-grid SISIM shape comparison; SGSIM simulation and both five-fold prediction datasets are reused unchanged.
+The SGSIM reproduction panel uses 100 Gaussian residual fields in EW/NS, scaled by a common total input sill with its non-zero nugget.
 
-The compressed VTK unpacks to `model_gok_sisim_final_20261018.vtk` for visualization. Compression preserves the model bytes and avoids committing an ordinary Git file larger than 100 MiB. The September config, original `pics/data/` tables, original VTK and old provenance record are retained as explicitly historical evidence. They are not the current article result. `python scripts/verify_article_evidence.py` checks that historical snapshot. Earlier presentations also remain in Git history.
+The 3D model is supplied as a gzip-compressed VTK. Decompress it to `model_gok_sisim_final_20261018.vtk` before opening it in a visualization application.
 
 ## Repository and provenance
 
-`scripts/` contains the staged workflow and numerical routines; `configs/` contains example profiles; `data/` contains the input subset and reference terrain; `tests/` contains regression checks. The interactive `legacy/Workflow_U9_Wang.py` is retained as a reference and must not be executed as the production runner.
+`scripts/` contains the staged workflow and numerical routines; `configs/` contains example profiles; `data/` contains the input subset and reference terrain; `tests/` contains regression checks. `legacy/Workflow_U9_Wang.py` is the original interactive reference. Use `run_workflow.py` to execute the staged workflow.
 
-English translations affect comment text only in two original source files. Executable tokens and numerical parameters are unchanged. [Source localization records](docs/core_source_localization.json) retain both original and release hashes. Historical run manifests retain the hashes of the versions that produced their results. Machine-local workspace prefixes have been replaced with a labelled placeholder in selected provenance records.
+Implementation provenance and version checks are documented in the [source records](docs/core_source_localization.json). Earlier calculation and release records are described in the [technical record](docs/final_20261018/README.md#calculation-records).
 
-The existing repository [LICENSE](LICENSE), GNU Affero General Public License v3.0, is retained. See [THIRD_PARTY.md](THIRD_PARTY.md) for author notices and source/dependency provenance. Windows CI runs the regression tests and historical reference-evidence and current-result checks; GSLIB integration requires the external executables. [Release verification](docs/RELEASE_VERIFICATION.md) records the checks for this English-language package.
+The repository license is [GNU Affero General Public License v3.0](LICENSE). Author notices and dependency provenance are in [THIRD_PARTY.md](THIRD_PARTY.md). Windows CI runs the regression tests and packaged-result checks.

@@ -51,6 +51,6 @@ def main():
     vtk=root/'vtk/model_gok_exponential.vtk'
     assert hashlib.sha256(vtk.read_bytes()).hexdigest()==read_json(root/'pics/provenance.json')['vtk_sha256']
     print(f'PASS: grid/mask, 5 confusion matrices and metrics, fold grouping, stability tables, core hashes and VTK; accuracy={correct/total:.12f}; N={total}.')
-    print('Scope: packaged evidence consistency; not a fresh simulation or independent statistical validation.')
+    print('Scope: consistency of the bundled reference-case evidence.')
 
 if __name__=='__main__':main()

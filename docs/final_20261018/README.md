@@ -1,45 +1,68 @@
-# Current calibrated SISIM article record - 18 October 2026
+# Model parameters and calculation record
 
-This record documents the current selected `response_step_50` input and its actually generated outputs. It retains the original September article example, source localization records, tests, license, terrain and historical VTK. Current article figures replace their root `pics/` paths; their canonical outputs and data are under `pics/final_20261018/`. `pics/current_article.json` identifies the current figure set.
+This record describes the `response_step_50` SISIM model, the SGSIM boundary model and their article results. Figures are in `pics/`; redraw inputs are in `pics/final_20261018/` and indexed by `pics/current_article.json`.
 
-## Selected input and actual calculations
+## Selected input and calculations
 
-`configs/exponential_sisim_final_20261018.json` changes only the profile name and categorical variogram relative to `configs/exponential_20260916.json`. The new categorical input has zero nugget and four positive exponential contributions 0.05/0.04/0.04/0.12. The calibration search held that four-structure layout and contributions fixed and adjusted EW/NS/Z ranges. The archived September profile instead has one categorical structure and a nugget of 0.025146355593272343; it is preserved as published. Explicitly select the new configuration to use the calibrated input. The continuous SGSIM input, conditioning procedure, search settings, ensemble ordering and original numerical simulation functions were retained.
+The article configuration is `configs/exponential_sisim_final_20261018.json`. SISIM uses zero nugget and four exponential structures with contributions 0.05/0.04/0.04/0.12. Calibration held these contributions fixed and adjusted the EW/NS/Z ranges. SGSIM uses the continuous model specified in the same configuration.
 
-The selected input received 100 spatial realizations. It subsequently received a new whole-borehole/group five-fold SISIM CV with **100 realizations per fold: 500 new realizations, 100 native batches**. Existing fold assignments and training conditions were reused; the native signatures, output dimensions, completion logs and protected input hashes were checked. `native_batches_verified.csv` records all batch hashes. `holdout_audit.json` checks the retained holdouts, including zero shared training/test voxels in every fold. Full raw simulation arrays/logs are external generated outputs, not bundled GitHub inputs.
+The spatial ensemble has 100 realizations. Grouped five-fold SISIM CV uses 100 realizations per fold: 500 realizations in 100 native batches. [Batch records](native_batches_verified.csv) contain output hashes; the [holdout audit](holdout_audit.json) records group assignments and zero shared training/test voxels in each fold. Full native realization arrays and logs are generated externally.
 
 ## Spatial continuity
 
-The Figure 8 style panels compare fixed experimental points, the selected theoretical input, one reproduced mean and one 5th-95th percentile envelope per direction. Horizontal nominal lag is 10 m, vertical 0.5 m. Experimental zero/near-zero records remain in the CSVs but are not displayed as regular lags. The reproduced mean/envelope includes the identity gamma(0)=0; this is not an added measured or fitted datum. Axes retain metres horizontally and normalized semivariance 0-1.2 vertically.
+### SISIM
 
-The final 07 and single 08 independently divide each direction/series by its own maximum over the plotted lag window, making all displayed peaks one. 08 uses the entire binary SISIM grid, without a Neogene-domain mask. The reproduced mean has linewidth 3.2 and all ensemble members share its denominator, preserving relative spread. Theoretical input is unit-sill scaled and then divided by its plotted peak; this is a display transform, not a modified three-dimensional covariance model. This removes amplitude differences and is a shape comparison only. Scaling factors and raw common-reference full-grid RMSE (EW 0.19886292, NS 0.13333520, Z 0.09661573, reference variance 0.24815277295195295) are in `../../pics/final_20261018/data/variogram_peak_normalization.json`. Raw data and input parameters are unchanged; residuals and conditional-validation limitations remain. This figure does not establish a universal acceptance threshold.
+Figures 07-08 show the experimental points and theoretical input; Figure 08 adds the mean reproduced variogram and 5th-95th percentile envelope over the complete binary SISIM grid. Horizontal nominal lag is 10 m and vertical lag is 0.5 m. Positive nominal-lag experimental bins are plotted at their actual distances. The reproduced origin is gamma(0)=0. Distances are in metres and the normalized y-axis is 0-1.2.
 
-- [Final 07: experimental and theoretical input](../../pics/07_variogram_indicator_fit.png)
-- [Only final 08: complete SISIM, peak-normalized shapes](../../pics/08_variogram_reproduction.png)
-- [Updated entropy sections](../../pics/final_20261018/13_sections_entropy.png)
-- [Updated variability sections](../../pics/final_20261018/14_sections_variability.png)
+Within each direction and plotted lag window, experimental, theoretical and reproduced series are divided by their own maxima to compare shape. All realizations use the reproduced-mean peak as the envelope denominator. Scaling factors are in [variogram_peak_normalization.json](../../pics/final_20261018/data/variogram_peak_normalization.json).
+
+Raw full-grid errors use common reference variance 0.24815277295195295:
+
+| Direction | Common-reference normalized RMSE |
+| --- | ---: |
+| EW | 0.19886292 |
+| NS | 0.13333520 |
+| Z | 0.09661573 |
+
+- [Experimental and theoretical input](../../pics/07_variogram_indicator_fit.png)
+- [SISIM reproduced variogram](../../pics/08_variogram_reproduction.png)
+- [Entropy sections](../../pics/13_sections_entropy.png)
+- [Variability sections](../../pics/14_sections_variability.png)
 
 ### Continuous SGSIM reproduction
 
-SGSIM spatial reproduction is supplied separately as `06_sgsim_variogram_reproduction.png/pdf`: 100 complete 100 x 100 Gaussian residual fields, before trend restoration and back-transform. This is a two-dimensional interface, so only EW and NS are meaningful. Its actual nugget 0.13695550591961783 is retained. Experimental, input and reproduced curves all divide by the same actual total input sill 0.9003331304926536; the nugget/sill ratio is 0.15211648. Positive-distance theoretical curves retain the nugget jump; gamma(0)=0 is shown separately. The original experimental GAMV has nominal lag 5 m and tolerance 2.5 m; reproduced uses all axial grid pairs at 10 m increments. Points retain actual distances and counts, with no fabricated matching observations. The display is limited to 155 m and y=0-1.2. Reproduced/input NRMSE divided by the common sill is EW 0.00873236 and NS 0.00839186; reproduced/experimental NRMSE on overlapping distances is EW 0.08626311 and NS 0.06261752. These metrics do not imply a universal acceptance threshold. Source hashes, pair-estimator checks and the full 100-member lag curves are bundled. The source simulations and CV were not rerun. This common-sill display differs explicitly from the independent-peak shape presentation used for the zero-nugget SISIM figures 07/08.
+SGSIM reproduction uses 100 complete 100 x 100 Gaussian residual fields before trend restoration and back-transform. The two-dimensional interface has EW and NS spatial directions. All series share total input sill 0.9003331304926536, including nugget 0.13695550591961783 (nugget/sill=0.15211648). The theoretical curve shows the positive-distance nugget jump, with gamma(0)=0 displayed separately.
 
-- [SGSIM experimental/input/reproduced comparison](../../pics/06_sgsim_variogram_reproduction.png)
+The original experimental GAMV uses nominal lag 5 m and tolerance 2.5 m. Reproduced curves use all axial grid pairs at 10 m increments. Comparisons use actual lag distances and pair counts; the display spans 0-155 m and normalized semivariance 0-1.2.
+
+| Direction | Reproduced/input NRMSE | Reproduced/experimental NRMSE |
+| --- | ---: | ---: |
+| EW | 0.00873236 | 0.08626311 |
+| NS | 0.00839186 | 0.06261752 |
+
+These errors use the common input sill and overlapping distances. The [source record](../../pics/final_20261018/data/sgsim_reproduction_provenance.json) contains hashes, pair-estimator checks and calculation settings; per-realization lag curves are bundled with the plot data.
+
+- [SGSIM reproduction](../../pics/06_sgsim_variogram_reproduction.png)
 
 ## Probability calibration
 
-[Wiegel et al. (2024)](https://doi.org/10.1002/gete.202400011), Figures 9 and 7a, inform the two displays. This project retains five folds for both submodels.
+The displays follow [Wiegel et al. (2024)](https://doi.org/10.1002/gete.202400011), Figures 9 and 7a. Both submodels use five folds and 100 realizations per fold.
 
-- **Binary SISIM:** 22,313 withheld observed Neogene clay/sand composites, 694 boreholes, 623 groups. Sand probability is the raw 0/1 SISIM frequency over 100 realizations, not hierarchical p_sand. The 50 fixed 2% probability bins show actual sand frequency as a staircase, with one bisector and no older-model overlay. Bins are (lower, upper], including p=0 in the first bin. All bins are populated; the smallest has 179 samples. There is no smoothing or artificial data insertion. ECE is 0.04422624, unweighted bin MAE 0.05229931, Brier 0.13174859 and binary classification accuracy 0.81172411 (ties classified as clay).
-- **SGSIM:** the same saved 664 withheld boundary observations and original 100-member fold ensembles are reused without new SGSIM. The ECDF of their unchanged mid-PIT ranks is compared with the bisector, following the cumulative-quantile presentation. The existing nominal-quantile table is preserved, with mean absolute calibration gap 0.01085923. This ECDF display differs slightly from the previous 5%-quantile-point display because of finite-ensemble rank discretization; it is not a change to predictions.
+- **Binary SISIM:** 22,313 held-out observed Neogene clay/sand composites from 694 boreholes and 623 groups. Sand probability is the binary SISIM frequency over 100 realizations. Observed frequencies are displayed in 50 fixed 2% bins, (lower, upper], with p=0 in the first bin. Every bin is populated; the smallest has 179 samples. ECE is 0.04422624, unweighted bin MAE 0.05229931, Brier score 0.13174859 and classification accuracy 0.81172411; ties are classified as clay.
+- **SGSIM:** 664 held-out boundary observations and their 100-member ensembles. The plot is the ECDF of mid-PIT quantile ranks. The saved nominal-quantile table has mean absolute calibration gap 0.01085923.
 
-SISIM still has local miscalibration: in the 0-10% prediction region, mean predicted sand probability is 0.0430 versus observed frequency 0.1427 (3441 samples); in the 40-80% region it is 0.5976 versus 0.5269 (4333 samples). These deviations are not removed or explained away as universally sparse bins. The CV was not used to tune the selected ranges further.
+For predictions in the 0-10% region, mean sand probability is 0.0430 versus observed frequency 0.1427 (3441 samples). In the 40-80% region, the values are 0.5976 and 0.5269 (4333 samples).
 
-- [Binary-only SISIM calibration](../../pics/final_20261018/figure9_sisim_calibration.png)
-- [Unchanged SGSIM data, cumulative calibration](../../pics/final_20261018/figure9_sgsim_calibration.png)
-- [Two-panel calibration figure](../../pics/final_20261018/figure9_final_calibration.png)
+The [validation summary](../article/VALIDATION.md#probability-calibration) describes holdout construction, weighting and preprocessing. The [protocol](protocol.json) records the model-selection and fold settings.
 
-This is fixed-full-data-variogram, whole-borehole/group conditional CV, not nested variogram-selection validation. Composite weighting is retained; samples are not independent equal-weight boreholes. The original production/CV preprocessing distinction remains. The original model VTK is retained as baseline evidence and does not represent this new categorical input. The selected-input VTK is supplied losslessly compressed as `vtk/model_gok_sisim_final_20261018.vtk.gz`; its decompressed hash is in the new model provenance.
+- [Binary SISIM calibration](../../pics/figure9_sisim_calibration.png)
+- [SGSIM calibration](../../pics/figure9_sgsim_calibration.png)
+- [Combined calibration panels](../../pics/figure9_final_calibration.png)
 
-All new simulation/UQ panels use the selected 100 SISIM fields paired with unchanged original SGSIM surfaces. Original entropy, class tie-breaking, variability and threshold rules are retained. The numerical-run utility hash and current English-release hash differ only in comments; this equivalence was independently checked and is documented in the existing source-localization records.
+## Calculation records
 
-See [REPRODUCE.md](REPRODUCE.md) for commands. The English release, license, source data and original evidence remain in place. No new license rights are inferred for source data, figures or third-party materials.
+The current model is delivered as `vtk/model_gok_sisim_final_20261018.vtk.gz`. Figure arrays, section sampling and model hashes are in [final_model_provenance.json](../../pics/final_20261018/data/final_model_provenance.json). Ensemble summaries pair SISIM fields with their SGSIM surfaces and use the recorded class, entropy and variability definitions.
+
+The September example is archived in `configs/exponential_20260916.json`, `docs/article/recorded_run/`, `docs/article/source_audit.json`, the original `pics/data/` tables and `vtk/model_gok_exponential.vtk`. Its categorical model has one structure and nugget 0.025146355593272343. `python scripts/verify_article_evidence.py` checks that reference snapshot.
+
+Implementation version checks are in [core_source_localization.json](../core_source_localization.json). See [REPRODUCE.md](REPRODUCE.md) for commands and [THIRD_PARTY.md](../../THIRD_PARTY.md) for source notices.

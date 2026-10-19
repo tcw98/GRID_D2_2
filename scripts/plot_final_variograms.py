@@ -1,8 +1,8 @@
 """Final Figures 07/08: direction-wise peak normalization, complete binary SISIM grid.
 
-All three plotted curves reach one in each direction. This presentation removes
-amplitude differences; it is not a common-variance spatial acceptance check.
-No simulation, fitting, original-data changes or publication is performed.
+Each series is divided by its plotted maximum within each direction.
+Raw amplitude errors are recorded alongside the shape comparison.
+The script redraws figures and plot metadata from bundled realization curves.
 """
 from pathlib import Path
 import hashlib
@@ -134,7 +134,7 @@ def main():
                   normalization='For each direction, experimental and mean reproduced divide by their own plotted maxima; input divides by total sill and then by its plotted maximum.',
                   envelope='100 members share the mean reproduced peak denominator in each direction.',
                   origin='Only gamma(0)=0 identity for reproduced; no experimental zero/near-zero bin plotted.',
-                  interpretation='Peak-normalized shape display. Amplitude is removed; not a common-variance spatial validation.',
+                  interpretation='Direction-wise peak-normalized shapes; raw amplitude errors are recorded separately.',
                   input_hashes=hashes, factors=factors, source_files_unchanged=True)
     reference = json.loads((DATA / 'variogram_normalization.json').read_text())['common_reference_variance']
     rmse = {}

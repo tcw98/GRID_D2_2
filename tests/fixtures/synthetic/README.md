@@ -6,9 +6,9 @@ Their coordinate system is EPSG:25832; generation first constructs points in the
 legacy rotated Munich frame, then rotates back to real-world coordinates.
 
 Elevations and gravel/sand/clay descriptions are invented for software tests.
-They are not Munich observations and must not be used for engineering decisions.
+They are synthetic test records.
 Each borehole has an explicitly logged gravel base and 100 m end depth.
 
 The `data/bohrungen_epsg25832_shp/` subdirectory intentionally follows the legacy
 WD layout. Replace the `--wd` argument to use your local, original WD dataset.
-The real borehole archive is not part of this GitHub upload directory.
+Real borehole inputs are supplied separately under `data/real_munich/`.

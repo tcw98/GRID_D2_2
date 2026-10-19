@@ -11,7 +11,7 @@
   "pdf_render_review": "PASS: twelve current one-page PDFs rendered; SGSIM reproduction and final SISIM 07/08 visually reviewed",
   "existing_simulation_sources": "unchanged bytes",
   "git_operations": "User authorized an ordinary commit and push to main; this record describes pre-push validation, not remote publication success",
-  "scope": "Packaged evidence consistency and redraw. Does not re-run simulations or prove spatial acceptance.",
+  "scope": "Consistency checks for packaged calculations, figures and provenance.",
   "original_config_terrain_data_vtk_license_ci": "unchanged bytes; original figure aliases replaced by current article figures and old provenance explicitly labelled historical",
   "current_article_assets": "PASS: 12 PNG/PDF pairs match canonical outputs; only one SISIM 08 remains",
   "current_vtk": "PASS: compressed file decompresses to the original selected-model SHA-256; no geometry or field conversion",

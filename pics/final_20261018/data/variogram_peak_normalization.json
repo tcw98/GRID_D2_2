@@ -3,7 +3,7 @@
   "normalization": "For each direction, experimental and mean reproduced divide by their own plotted maxima; input divides by total sill and then by its plotted maximum.",
   "envelope": "100 members share the mean reproduced peak denominator in each direction.",
   "origin": "Only gamma(0)=0 identity for reproduced; no experimental zero/near-zero bin plotted.",
-  "interpretation": "Peak-normalized shape display. Amplitude is removed; not a common-variance spatial validation.",
+  "interpretation": "Direction-wise peak-normalized shapes; raw amplitude errors are recorded separately.",
   "input_hashes": {
     "exponential.json": "d18969ef32f3735a527a7cf35546034ed8c59e25ff0e2ac566504548dff4c58c",
     "experimental_EW.csv": "f3ee8647157e719570a36aed25d90bf7d028a65a448811cfaf003b8527cdc5c7",

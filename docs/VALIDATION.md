@@ -1,8 +1,8 @@
-> Historical record: source hashes below refer to the original calculation versions. Comment-only English localization and current release hashes are documented in `core_source_localization.json`.
+> Historical synthetic verification - 12 September 2026. [Current article validation](article/VALIDATION.md).
 
 # Historical synthetic verification
 
-This file records the 12 September synthetic verification only. The default example was replaced by real boreholes on 13 September. Current evidence is in [real_example/VALIDATION.md](real_example/VALIDATION.md).
+This file records the 12 September synthetic verification only. The default example was replaced by real boreholes on 13 September. Article results are documented in [article/VALIDATION.md](article/VALIDATION.md).
 
 # Numerical compatibility and verification
 
